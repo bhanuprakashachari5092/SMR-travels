@@ -98,7 +98,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
         {/* Bottom Bar & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <p>© 2026 SMR Car Travels. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-2 text-slate-400">
+            <span>© 2026 SMR Car Travels. All rights reserved.</span>
+            <span className="hidden sm:inline text-slate-600">•</span>
+            <span>
+              Developed by{' '}
+              <a
+                href="https://shaivika-it-technologies.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#00D8F6] hover:underline hover:text-white transition-colors"
+              >
+                Shaivika Groups
+              </a>
+            </span>
+          </div>
 
           <div className="flex items-center gap-6">
             <a href="#hero" className="hover:text-white transition-colors">Privacy Policy</a>
