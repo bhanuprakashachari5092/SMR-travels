@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Award, Clock, HeartHandshake, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Shield, Award, Clock, HeartHandshake, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const SLIDE_VEHICLES = [
   {
@@ -34,7 +34,11 @@ const SLIDE_VEHICLES = [
   },
 ];
 
-export const About: React.FC = () => {
+interface AboutProps {
+  onOpenBooking?: (carName?: string) => void;
+}
+
+export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Auto slide every 3.5 seconds
@@ -65,15 +69,21 @@ export const About: React.FC = () => {
               {/* Background Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Top Vehicle Label Badge */}
+              {/* Top Vehicle Label Badge & Quick Book Action */}
               <div className="relative z-10 flex items-center justify-between">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-blue-100 text-xs font-extrabold text-[#1769FF] shadow-xs">
                   <span className="w-2 h-2 rounded-full bg-[#1769FF] animate-pulse" />
                   <span>{SLIDE_VEHICLES[currentSlide].name}</span>
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200">
-                  {SLIDE_VEHICLES[currentSlide].tag}
-                </span>
+                {onOpenBooking && (
+                  <button
+                    onClick={() => onOpenBooking(SLIDE_VEHICLES[currentSlide].name)}
+                    className="text-[11px] font-bold text-white bg-gradient-to-r from-[#1769FF] to-[#00B8D9] hover:opacity-90 px-3 py-1 rounded-lg shadow-sm transition-all flex items-center gap-1 transform hover:scale-105"
+                  >
+                    <span>Book {SLIDE_VEHICLES[currentSlide].name.split(' ')[0]}</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </button>
+                )}
               </div>
 
               {/* Main Sliding Image Display */}

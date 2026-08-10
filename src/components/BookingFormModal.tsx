@@ -33,16 +33,15 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
   });
 
   useEffect(() => {
-    if (preselectedCar) {
-      setFormData((prev) => ({ ...prev, carPreference: preselectedCar }));
+    if (isOpen) {
+      if (preselectedCar) {
+        setFormData((prev) => ({ ...prev, carPreference: preselectedCar }));
+      }
+      if (preselectedService) {
+        setFormData((prev) => ({ ...prev, serviceType: preselectedService }));
+      }
     }
-  }, [preselectedCar]);
-
-  useEffect(() => {
-    if (preselectedService) {
-      setFormData((prev) => ({ ...prev, serviceType: preselectedService }));
-    }
-  }, [preselectedService]);
+  }, [isOpen, preselectedCar, preselectedService]);
 
   if (!isOpen) return null;
 

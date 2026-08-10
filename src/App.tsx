@@ -66,7 +66,7 @@ export function App() {
         <BookingProcess onOpenBooking={() => handleOpenBooking()} />
 
         {/* Brand Promise & About Us */}
-        <About />
+        <About onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
         {/* Verified Customer Testimonials (Moved to Bottom) */}
         <Testimonials />
