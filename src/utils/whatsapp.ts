@@ -3,34 +3,33 @@ import { SITE_CONFIG } from '../config/siteConfig';
 
 export function buildWhatsAppMessage(data: BookingFormData): string {
   const messageLines = [
-    `Hello SMR Car Travels,`,
+    `🚗 Hello SMR Car Travels,`,
     ``,
-    `I would like to book a ride.`,
+    `I would like to book a ride with you.`,
     ``,
-    `*Name:* ${data.fullName || 'Not provided'}`,
-    `*Mobile:* ${data.mobile || 'Not provided'}`,
-    `*Pickup Location:* ${data.pickupLocation || 'Not provided'}`,
-    `*Drop Location:* ${data.dropLocation || 'Not provided'}`,
-    `*Date:* ${data.travelDate || 'Not specified'}`,
-    `*Time:* ${data.travelTime || 'Not specified'}`,
-    `*Passengers:* ${data.passengers || '1'}`,
-    `*Car Preference:* ${data.carPreference || 'Any available car'}`,
+    `👤 Name: ${data.fullName || 'Not provided'}`,
+    `📱 Mobile: ${data.mobile || 'Not provided'}`,
+    `📍 Pickup Location: ${data.pickupLocation || 'Not provided'}`,
+    `🎯 Drop Location: ${data.dropLocation || 'Not provided'}`,
+    `📅 Travel Date: ${data.travelDate || 'Not specified'}`,
+    `⏰ Travel Time: ${data.travelTime || 'Not specified'}`,
+    `👥 Passengers: ${data.passengers || '1'}`,
+    `🚘 Car Preference: ${data.carPreference || 'Any available vehicle'}`,
   ];
 
   if (data.serviceType) {
-    messageLines.push(`*Service Type:* ${data.serviceType}`);
+    messageLines.push(`🚖 Service Type: ${data.serviceType}`);
   }
 
   if (data.additionalMessage && data.additionalMessage.trim()) {
-    messageLines.push(``, `*Additional Message:*`, data.additionalMessage.trim());
+    messageLines.push(``, `📝 Additional Request:`, data.additionalMessage.trim());
   }
 
   messageLines.push(
     ``,
-    `Please confirm the availability and fare.`,
+    `Please confirm the vehicle availability and fare quote.`,
     ``,
-    `Thank you,`,
-    `${data.fullName ? data.fullName : 'SMR Car Travels Customer'}`
+    `Thank you!`
   );
 
   return messageLines.join('\n');
