@@ -70,7 +70,31 @@ export function buildWhatsAppMessage(data: BookingFormData): string {
   return messageLines.join('\n');
 }
 
+/**
+ * Log booking data to Google Sheets via Webhook URL if configured in .env
+ */
+export function logToGoogleSheets(data: BookingFormData): void {
+  const webhookUrl = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL;
+  if (!webhookUrl || webhookUrl.includes('YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL')) return;
+
+  try {
+    fetch(webhookUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).catch((err) => console.log('Google Sheets log error:', err));
+  } catch (err) {
+    console.log('Google Sheets log exception:', err);
+  }
+}
+
 export function openWhatsAppBooking(data: BookingFormData, customNumber?: string): void {
+  // Asynchronously log booking data to Google Sheets
+  logToGoogleSheets(data);
+
   const message = buildWhatsAppMessage(data);
   const rawNumber = customNumber || SITE_CONFIG.whatsappNumber;
   // Clean phone number (remove spaces, plus, dashes)
