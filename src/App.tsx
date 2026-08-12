@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { ScrollProgress } from './components/ScrollProgress';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero/Hero';
+import { QuickSearchWidget } from './components/QuickSearchWidget';
 import { VideoSection } from './components/VideoSection';
+import { FounderSection } from './components/FounderSection';
 import { BookingFormModal } from './components/BookingFormModal';
 import { Services } from './components/Services';
 import { Fleet } from './components/Fleet';
@@ -47,8 +49,14 @@ export function App() {
         {/* 1. Hero Section */}
         <Hero onOpenBooking={() => handleOpenBooking()} />
 
+        {/* MakeMyTrip Style Pickup & Drop Booking Search Widget */}
+        <QuickSearchWidget onOpenBooking={(carName) => handleOpenBooking(carName)} />
+
         {/* 2. Video Showcase Section (Right after Hero, Video on Left without Audio) */}
         <VideoSection />
+
+        {/* 3. Executive Headquarters & Leadership Section */}
+        <FounderSection onOpenBooking={() => handleOpenBooking()} />
 
         {/* 3. Key Stats Counter Section */}
         <Stats />

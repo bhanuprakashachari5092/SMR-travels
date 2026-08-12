@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <div className="pt-2">
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#1769FF] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-md transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-md transition-all"
               >
                 <MessageSquare className="w-4 h-4 fill-white/20" />
                 <span>Instant WhatsApp Booking</span>
@@ -69,26 +69,31 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#1769FF] flex-shrink-0 mt-0.5" />
-                <a href={`tel:${SITE_CONFIG.contactPhone}`} className="hover:text-white transition-colors">
-                  {SITE_CONFIG.contactPhone}
-                </a>
+                <Phone className="w-4 h-4 text-[#1769FF] shrink-0 mt-0.5" />
+                <div className="flex flex-col space-y-0.5">
+                  <a href={`tel:${SITE_CONFIG.contactPhone}`} className="hover:text-white transition-colors">
+                    {SITE_CONFIG.contactPhone}
+                  </a>
+                  <a href={`tel:${SITE_CONFIG.contactPhone2}`} className="hover:text-white transition-colors">
+                    {SITE_CONFIG.contactPhone2}
+                  </a>
+                </div>
               </li>
 
               <li className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#00B8D9] flex-shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#00B8D9] shrink-0 mt-0.5" />
                 <a href={`mailto:${SITE_CONFIG.contactEmail}`} className="hover:text-white transition-colors">
                   {SITE_CONFIG.contactEmail}
                 </a>
               </li>
 
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <span className="text-xs leading-relaxed">{SITE_CONFIG.address}</span>
               </li>
 
               <li className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-[#C9A227] flex-shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-[#C9A227] shrink-0 mt-0.5" />
                 <span className="text-xs">{SITE_CONFIG.openingHours}</span>
               </li>
             </ul>

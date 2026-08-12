@@ -3,9 +3,9 @@ import { Shield, CheckCircle2 } from 'lucide-react';
 
 export const VideoSection: React.FC = () => {
   return (
-    <section className="relative py-12 md:py-20 bg-gradient-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
+    <section className="relative py-12 md:py-20 bg-linear-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
       {/* Soft Cyan Ambient Glow Highlights */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#1769FF]/15 via-[#00B8D9]/15 to-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-linear-to-tr from-[#1769FF]/15 via-[#00B8D9]/15 to-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -13,7 +13,7 @@ export const VideoSection: React.FC = () => {
           {/* Left Column - Video Showcase without audio */}
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden bg-white/80 backdrop-blur-xl border border-slate-200/90 shadow-2xl shadow-blue-500/15 group p-2.5 sm:p-4">
-              <div className="relative aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
+              <div className="relative aspect-video sm:aspect-4/3 rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
                 {/* Autoplay Muted Loop Video without Audio (PiP & Enhancements Restricted) */}
                 <video
                   src="/SMR travels.mp4"
@@ -55,7 +55,7 @@ export const VideoSection: React.FC = () => {
             <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B1F3A] leading-tight">
                 Experience Luxury & Comfort{' '}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] via-[#3157D5] to-[#00B8D9]">
+                <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] via-[#3157D5] to-[#00B8D9]">
                   Before You Book.
                 </span>
               </h2>
@@ -69,19 +69,19 @@ export const VideoSection: React.FC = () => {
             {/* Feature Checklist */}
             <div className="space-y-3 pt-1">
               <div className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                <CheckCircle2 className="w-5 h-5 text-[#1769FF] flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#1769FF] shrink-0" />
                 <span>Pristine, sanitized AC vehicles (Sedans, SUVs & Travellers)</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                <CheckCircle2 className="w-5 h-5 text-[#00B8D9] flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#00B8D9] shrink-0" />
                 <span>Professional & verified uniformed chauffeurs</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span>Punctual doorstep pickup & 24/7 active dispatch</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                <CheckCircle2 className="w-5 h-5 text-[#C9A227] flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#C9A227] shrink-0" />
                 <span>Instant WhatsApp booking & transparent fixed fares</span>
               </div>
             </div>

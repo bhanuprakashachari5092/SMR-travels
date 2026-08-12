@@ -56,7 +56,7 @@ export interface BookingFormData {
   travelDate: string;
   travelTime: string;
   passengers: string;
-  carPreference: string;
+  carPreference?: string;
   serviceType: string;
-  additionalMessage: string;
+  additionalMessage?: string;
 }

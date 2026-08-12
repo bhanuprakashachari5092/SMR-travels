@@ -29,7 +29,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
   return (
     <section id="services" className="py-20 relative overflow-hidden bg-[#F8FAFC]">
       {/* Background Accent */}
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -40,7 +40,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F3A] tracking-tight">
-            Travel Made <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] to-[#00B8D9]">Simple</span>
+            Travel Made <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">Simple</span>
           </h2>
 
           <p className="text-base text-slate-600 font-medium">

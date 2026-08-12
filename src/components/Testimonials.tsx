@@ -14,7 +14,7 @@ export const Testimonials: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F3A] tracking-tight">
-            What Our Customers <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] to-[#00B8D9]">Say</span>
+            What Our Customers <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">Say</span>
           </h2>
 
           <p className="text-base text-slate-600 font-medium">
@@ -47,7 +47,7 @@ export const Testimonials: React.FC = () => {
 
               {/* Author Footer with Anonymous Verified Traveler Badge */}
               <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#1769FF] to-[#00B8D9] text-white font-bold flex items-center justify-center shadow-sm flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-linear-to-br from-[#1769FF] to-[#00B8D9] text-white font-bold flex items-center justify-center shadow-sm shrink-0">
                   <CheckCircle2 className="w-5 h-5 text-white" />
                 </div>
                 <div>

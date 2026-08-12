@@ -38,7 +38,7 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F3A] tracking-tight">
-            How Booking <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] to-[#00B8D9]">Works</span>
+            How Booking <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">Works</span>
           </h2>
 
           <p className="text-base text-slate-600 font-medium">
@@ -49,8 +49,8 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
         {/* 3 Step Process Container with Connecting Road Line */}
         <div className="relative">
           {/* Connecting Road Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-[15%] right-[15%] h-1 -translate-y-1/2 bg-gradient-to-r from-[#1769FF] via-[#00B8D9] to-emerald-500 opacity-40 z-0">
-            <div className="w-full h-full bg-[linear-gradient(90deg,transparent_50%,#FFFFFF_50%)] bg-[size:16px_100%] animate-pulse" />
+          <div className="hidden lg:block absolute top-1/2 left-[15%] right-[15%] h-1 -translate-y-1/2 bg-linear-to-r from-[#1769FF] via-[#00B8D9] to-emerald-500 opacity-40 z-0">
+            <div className="w-full h-full bg-[linear-gradient(90deg,transparent_50%,#FFFFFF_50%)] bg-size-[16px_100%] animate-pulse" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
@@ -62,10 +62,10 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
               >
                 {/* Step Number Circle */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-blue-50 to-cyan-50 border border-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     {item.icon}
                   </div>
-                  <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gradient-to-r from-[#1769FF] to-[#00B8D9] text-white text-xs font-extrabold flex items-center justify-center shadow-md">
+                  <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-linear-to-r from-[#1769FF] to-[#00B8D9] text-white text-xs font-extrabold flex items-center justify-center shadow-md">
                     {item.step}
                   </span>
                 </div>

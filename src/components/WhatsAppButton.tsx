@@ -26,7 +26,7 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenBooking })
         onClick={onOpenBooking}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative group p-4 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-400/50 transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
+        className="relative group p-4 rounded-full bg-linear-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-400/50 transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
         aria-label="Open WhatsApp Booking"
       >
         {/* Subtle Pulse Ring */}

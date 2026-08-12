@@ -12,18 +12,18 @@ export const CTA: React.FC<CTAProps> = ({ onOpenBooking }) => {
   )}`;
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-[#071426] via-[#0B1F3A] to-[#1769FF]">
+    <section className="py-20 relative overflow-hidden bg-linear-to-br from-[#071426] via-[#0B1F3A] to-[#1769FF]">
       {/* Moving background light trails effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#1769FF]/20 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-[#1769FF]/20 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="bg-white/10 backdrop-blur-2xl rounded-3xl p-10 sm:p-16 border border-white/20 relative overflow-hidden shadow-2xl">
           {/* Top highlight accent */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1769FF] via-[#00B8D9] to-[#C9A227]" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-[#1769FF] via-[#00B8D9] to-[#C9A227]" />
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Ready for Your Next <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-200">Journey?</span>
+            Ready for Your Next <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-cyan-200 to-blue-200">Journey?</span>
           </h2>
 
           <p className="text-base sm:text-lg text-blue-100/90 max-w-2xl mx-auto mb-8 font-medium">

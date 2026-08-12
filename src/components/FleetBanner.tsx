@@ -2,9 +2,9 @@ import React from 'react';
 
 export const FleetBanner: React.FC = () => {
   return (
-    <section className="relative py-6 sm:py-10 bg-gradient-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
+    <section className="relative py-6 sm:py-10 bg-linear-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
       {/* Background Cyan Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-gradient-to-r from-blue-400/15 via-cyan-400/20 to-blue-400/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-87.5 bg-linear-to-r from-blue-400/15 via-cyan-400/20 to-blue-400/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Full Fleet Lineup Image Seamlessly Displayed */}

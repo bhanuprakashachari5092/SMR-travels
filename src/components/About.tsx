@@ -3,6 +3,11 @@ import { Shield, Award, Clock, HeartHandshake, ChevronLeft, ChevronRight, ArrowR
 
 const SLIDE_VEHICLES = [
   {
+    name: 'Toyota Innova Crysta',
+    tag: 'Executive Luxury SUV',
+    image: '/images/innova-hero.png',
+  },
+  {
     name: 'Suzuki Ertiga (7 Seater)',
     tag: 'Executive SUV',
     image: '/images/about/ertiga.png',
@@ -64,7 +69,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
           
           {/* Left Visual Column - Automatic Vehicle Slideshow Carousel */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden bg-[#FFFFFF] border border-slate-200/90 shadow-2xl p-4 sm:p-6 group min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+            <div className="relative rounded-3xl overflow-hidden bg-[#FFFFFF] border border-slate-200/90 shadow-2xl p-4 sm:p-6 group min-h-95 sm:min-h-110 flex flex-col justify-between">
               
               {/* Background Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -78,7 +83,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
                 {onOpenBooking && (
                   <button
                     onClick={() => onOpenBooking(SLIDE_VEHICLES[currentSlide].name)}
-                    className="text-[11px] font-bold text-white bg-gradient-to-r from-[#1769FF] to-[#00B8D9] hover:opacity-90 px-3 py-1 rounded-lg shadow-sm transition-all flex items-center gap-1 transform hover:scale-105"
+                    className="text-[11px] font-bold text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:opacity-90 px-3 py-1 rounded-lg shadow-sm transition-all flex items-center gap-1 transform hover:scale-105"
                   >
                     <span>Book {SLIDE_VEHICLES[currentSlide].name.split(' ')[0]}</span>
                     <ArrowRight className="w-3 h-3" />
@@ -87,12 +92,12 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
               </div>
 
               {/* Main Sliding Image Display */}
-              <div className="relative z-10 my-auto py-3 flex items-center justify-center h-[260px] sm:h-[310px] overflow-hidden">
+              <div className="relative z-10 my-auto py-3 flex items-center justify-center h-65 sm:h-77.5 overflow-hidden">
                 <img
                   key={SLIDE_VEHICLES[currentSlide].image}
                   src={SLIDE_VEHICLES[currentSlide].image}
                   alt={SLIDE_VEHICLES[currentSlide].name}
-                  className="max-h-[220px] sm:max-h-[260px] max-w-[90%] w-auto object-contain transform transition-all duration-700 ease-in-out group-hover:scale-105 drop-shadow-[0_16px_28px_rgba(11,31,58,0.16)] animate-in fade-in zoom-in-95 duration-500"
+                  className="max-h-55 sm:max-h-65 max-w-[90%] w-auto object-contain transform transition-all duration-700 ease-in-out group-hover:scale-105 drop-shadow-[0_16px_28px_rgba(11,31,58,0.16)] animate-in fade-in zoom-in-95"
                 />
               </div>
 
@@ -139,7 +144,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] tracking-tight leading-tight">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] to-[#00B8D9]">SMR Car Travels</span>
+              About <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">SMR Car Travels</span>
             </h2>
 
             <p className="text-base text-slate-600 leading-relaxed font-normal">

@@ -6,7 +6,8 @@ export const SITE_CONFIG = {
   shortDescription: 'Reliable, comfortable and professional travel experiences — designed around your journey.',
   whatsappNumber: import.meta.env.VITE_SMR_WHATSAPP_NUMBER || '919989599621', // Configured WhatsApp number
   contactPhone: '+91 99895 99621',
-  contactEmail: 'bookings@smrcartravels.com',
+  contactPhone2: '+91 98664 34621',
+  contactEmail: 'smdr.143@gmail.com',
   address: 'SMR Car Travels Head Office, Main Transport Hub, Metro Road, City Center',
   openingHours: '24/7 Round-the-Clock Service',
   socialLinks: {
@@ -102,6 +103,20 @@ export const FLEET: CarModel[] = [
     image: '/images/about/etios.png',
     features: ['Spacious Rear Seat Legroom', 'Extra Boot Capacity', 'Powerful Air Cooling', 'Verified Chauffeur'],
     isPopular: false
+  },
+  {
+    id: 'toyota-innova-crysta',
+    name: 'Toyota Innova Crysta',
+    category: 'SUV',
+    seats: 7,
+    luggage: 4,
+    ac: true,
+    comfortRating: 5,
+    tagline: '4.9 ★ Premium Executive Outstation Luxury SUV',
+    description: 'Ultimate luxury MPV/SUV experience with captain seats, ambient lighting, dual AC, highway stability, and unmatched passenger comfort.',
+    image: '/images/innova-hero.png',
+    features: ['7 Passengers Luxury Seating', '4+ Large Suitcases', 'Dual Climate Control AC', 'Captain Leather Seats'],
+    isPopular: true
   },
   {
     id: 'suzuki-ertiga',

@@ -252,7 +252,7 @@ export const Hero3DCanvas: React.FC = () => {
   }
 
   return (
-    <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] rounded-3xl overflow-hidden bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-2xl shadow-blue-500/10">
+    <div className="relative w-full h-112.5 sm:h-137.5 lg:h-162.5 rounded-3xl overflow-hidden bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-2xl shadow-blue-500/10">
       <Canvas
         shadows
         gl={{ antialias: true, alpha: true }}

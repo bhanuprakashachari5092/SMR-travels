@@ -99,7 +99,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="e.g. Rahul Sharma"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -115,7 +115,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="e.g. +91 98765 43210"
                 value={formData.mobile}
                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -131,7 +131,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="City, Landmark or Address"
                 value={formData.pickupLocation}
                 onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -147,7 +147,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="Destination City or Airport"
                 value={formData.dropLocation}
                 onChange={(e) => setFormData({ ...formData, dropLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -163,7 +163,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 min={todayStr}
                 value={formData.travelDate}
                 onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
               />
             </div>
 
@@ -178,7 +178,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 required
                 value={formData.travelTime}
                 onChange={(e) => setFormData({ ...formData, travelTime: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
               />
             </div>
 
@@ -191,7 +191,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               <select
                 value={formData.passengers}
                 onChange={(e) => setFormData({ ...formData, passengers: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
               >
                 <option value="1 Passenger">1 Passenger</option>
                 <option value="2 Passengers">2 Passengers</option>
@@ -211,7 +211,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               <select
                 value={formData.carPreference}
                 onChange={(e) => setFormData({ ...formData, carPreference: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
               >
                 {FLEET.map((car) => (
                   <option key={car.id} value={car.name}>
@@ -231,7 +231,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
             <select
               value={formData.serviceType}
               onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
             >
               {SERVICES.map((srv) => (
                 <option key={srv.id} value={srv.title}>
@@ -251,7 +251,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               placeholder="e.g. Need child seat, extra luggage space, special flight pickup..."
               value={formData.additionalMessage}
               onChange={(e) => setFormData({ ...formData, additionalMessage: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-[#1769FF] focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
             />
           </div>
 
@@ -259,7 +259,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-3 py-3.5 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-xl shadow-emerald-600/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full flex items-center justify-center gap-3 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-xl shadow-emerald-600/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <MessageSquare className="w-5 h-5 fill-white/20" />
               <span>BOOK ON WHATSAPP NOW</span>

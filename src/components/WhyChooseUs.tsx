@@ -23,9 +23,9 @@ export const WhyChooseUs: React.FC = () => {
   };
 
   return (
-    <section id="why-us" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#F8FBFF] to-[#EEF6FF]">
+    <section id="why-us" className="py-20 relative overflow-hidden bg-linear-to-br from-[#F8FBFF] to-[#EEF6FF]">
       {/* Soft Glow Backdrop */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-blue-400/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -36,7 +36,7 @@ export const WhyChooseUs: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F3A] tracking-tight">
-            Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1769FF] to-[#00B8D9]">SMR Car Travels?</span>
+            Why Choose <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">SMR Car Travels?</span>
           </h2>
 
           <p className="text-base text-slate-600 font-medium">
@@ -52,7 +52,7 @@ export const WhyChooseUs: React.FC = () => {
               className="bg-white rounded-3xl p-8 border border-slate-200/80 flex flex-col items-start shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:border-[#1769FF]/30 transition-all duration-300 transform hover:-translate-y-1.5 animate-float"
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-linear-to-br from-blue-50 to-cyan-50 border border-blue-100 flex items-center justify-center mb-6 shadow-sm">
                 {getIcon(item.icon)}
               </div>
 
