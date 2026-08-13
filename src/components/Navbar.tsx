@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   ];
 
   const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-    'Hello SMR Car Travels! I would like to inquire about booking a ride.'
+    '\u{1F697} Hello SMR Car Travels! I would like to inquire about booking a ride.'
   )}`;
 
   return (

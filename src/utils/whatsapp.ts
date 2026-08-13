@@ -1,30 +1,32 @@
 import type { BookingFormData } from '../types';
 import { SITE_CONFIG } from '../config/siteConfig';
 
-// ES6 Unicode Escape Constants to guarantee 100% cross-platform clean emoji rendering
+// Pure ASCII Unicode escape constants to prevent file encoding corruption on Windows
 const EMOJI = {
-  car: '\u{1F697}',
-  user: '\u{1F464}',
-  pin: '\u{1F4CD}',
-  target: '\u{1F3AF}',
-  calendar: '\u{1F4C5}',
-  clock: '\u{23F0}',
-  group: '\u{1F465}',
-  mobile: '\u{1F4F1}',
-  vehicle: '\u{1F698}',
-  taxi: '\u{1F696}',
-  note: '\u{1F4DD}',
-  sparkles: '\u{2728}',
+  car: '\u{1F697}',       // 🚗
+  user: '\u{1F464}',      // 👤
+  pin: '\u{1F4CD}',       // 📍
+  target: '\u{1F3AF}',    // 🎯
+  calendar: '\u{1F4C5}',  // 📅
+  clock: '\u{1F551}',     // 🕒
+  group: '\u{1F465}',     // 👥
+  vehicle: '\u{1F698}',   // 🚘
+  mobile: '\u{1F4F1}',    // 📱
+  note: '\u{1F4DD}',      // 📝
+  sparkles: '\u{2728}\u{FE0F}', // ✨
 };
 
 function cleanText(text: string): string {
   if (!text) return '';
-  // Strip out any asterisks (*), hashes (#), colons (:), or replacement characters (\uFFFD)
-  return text.replace(/[*#:\uFFFD]/g, '').replace(/\s+/g, ' ').trim();
+  // Remove asterisks (*), hashes (#), replacement characters (\uFFFD), BOM (\uFEFF), zero-width spaces (\u200B-\u200D), and trim excess spaces
+  return text
+    .replace(/[*#\uFFFD\uFEFF\u200B-\u200D]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 export function buildWhatsAppMessage(data: BookingFormData): string {
-  const name = cleanText(data.fullName || 'Website Visitor');
+  const name = cleanText(data.fullName || 'Valued Customer');
   const pickup = cleanText(data.pickupLocation || 'Not specified');
   const drop = cleanText(data.dropLocation || 'Not specified');
   const date = cleanText(data.travelDate || 'Not specified');
@@ -34,37 +36,37 @@ export function buildWhatsAppMessage(data: BookingFormData): string {
   const messageLines = [
     `${EMOJI.car} Hello SMR Car Travels`,
     ``,
-    `I would like to book a ride with you`,
+    `I would like to book a ride with you. Here are my trip details:`,
     ``,
-    `${EMOJI.user} Name  ${name}`,
-    `${EMOJI.pin} Pickup Location  ${pickup}`,
-    `${EMOJI.target} Drop Location  ${drop}`,
-    `${EMOJI.calendar} Travel Date  ${date}`,
-    `${EMOJI.clock} Travel Time  ${time}`,
-    `${EMOJI.group} Passengers  ${passengers}`,
+    `${EMOJI.user} Name: ${name}`,
+    `${EMOJI.pin} Pickup Location: ${pickup}`,
+    `${EMOJI.target} Drop Location: ${drop}`,
+    `${EMOJI.calendar} Travel Date: ${date}`,
+    `${EMOJI.clock} Travel Time: ${time}`,
+    `${EMOJI.group} Passengers: ${passengers}`,
   ];
 
   if (data.serviceType) {
-    messageLines.push(`${EMOJI.taxi} Service Type  ${cleanText(data.serviceType)}`);
+    messageLines.push(`${EMOJI.vehicle} Service Type: ${cleanText(data.serviceType)}`);
   }
 
   if (data.mobile && data.mobile.trim()) {
-    messageLines.push(`${EMOJI.mobile} Mobile  ${cleanText(data.mobile)}`);
+    messageLines.push(`${EMOJI.mobile} Mobile: ${cleanText(data.mobile)}`);
   }
 
   if (data.carPreference && data.carPreference !== 'Any Available Vehicle') {
-    messageLines.push(`${EMOJI.vehicle} Vehicle  ${cleanText(data.carPreference)}`);
+    messageLines.push(`${EMOJI.vehicle} Vehicle: ${cleanText(data.carPreference)}`);
   }
 
   if (data.additionalMessage && data.additionalMessage.trim() && !data.additionalMessage.includes('booking request')) {
-    messageLines.push(``, `${EMOJI.note} Additional Details  ${cleanText(data.additionalMessage)}`);
+    messageLines.push(``, `${EMOJI.note} Additional Details: ${cleanText(data.additionalMessage)}`);
   }
 
   messageLines.push(
     ``,
-    `${EMOJI.sparkles} Please confirm vehicle availability and total fare quote`,
+    `${EMOJI.sparkles} Please confirm vehicle availability and total fare quote.`,
     ``,
-    `Thank you`
+    `Thank you!`
   );
 
   return messageLines.join('\n');
@@ -104,3 +106,4 @@ export function openWhatsAppBooking(data: BookingFormData, customNumber?: string
   const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodedText}`;
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 }
+
