@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SMRLogo } from './SMRLogo';
-import { Menu, X, ArrowRight, Phone, MessageSquare } from 'lucide-react';
+import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 interface NavbarProps {
@@ -83,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5"
             >
-              <MessageSquare className="w-3.5 h-3.5 fill-white/20" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>WhatsApp Us</span>
             </a>
 
@@ -116,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               className="p-2 rounded-full bg-emerald-600 text-white shadow-xs"
               aria-label="WhatsApp SMR Travels"
             >
-              <MessageSquare className="w-4 h-4 fill-white/20" />
+              <WhatsAppIcon className="w-4 h-4" />
             </a>
 
             {/* Quick Book Button */}
@@ -180,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm"
             >
-              <MessageSquare className="w-4 h-4 fill-white/20" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>WhatsApp Us Now</span>
             </a>
 

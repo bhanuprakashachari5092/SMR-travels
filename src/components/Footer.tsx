@@ -1,7 +1,8 @@
 import React from 'react';
 import { SMRLogo } from './SMRLogo';
 import { SITE_CONFIG, SERVICES } from '../config/siteConfig';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -32,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 onClick={onOpenBooking}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-md transition-all"
               >
-                <MessageSquare className="w-4 h-4 fill-white/20" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Instant WhatsApp Booking</span>
               </button>
             </div>

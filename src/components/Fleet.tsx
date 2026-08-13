@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FLEET } from '../config/siteConfig';
-import { Users, Briefcase, Snowflake, Star, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Users, Briefcase, Snowflake, Star, CheckCircle2 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface FleetProps {
   onSelectCar: (carName: string) => void;
@@ -142,7 +143,7 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
                   onClick={() => onSelectCar(car.name)}
                   className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-lg shadow-blue-500/20 hover:shadow-cyan-500/30 transition-all duration-300"
                 >
-                  <MessageSquare className="w-4 h-4 fill-white/20" />
+                  <WhatsAppIcon className="w-4 h-4" />
                   <span>Book {car.name} Now</span>
                 </button>
               </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface WhatsAppButtonProps {
   onOpenBooking: () => void;
@@ -32,7 +32,7 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenBooking })
         {/* Subtle Pulse Ring */}
         <span className="absolute -inset-1 rounded-full bg-emerald-500 opacity-40 animate-ping pointer-events-none" />
         
-        <MessageSquare className="w-6 h-6 fill-white/20 relative z-10" />
+        <WhatsAppIcon className="w-6 h-6 relative z-10" />
       </button>
     </div>
   );

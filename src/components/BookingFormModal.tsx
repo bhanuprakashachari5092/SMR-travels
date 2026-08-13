@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageSquare, Calendar, Clock, MapPin, User, Phone, Users, Car, Sparkles } from 'lucide-react';
+import { X, Calendar, Clock, MapPin, User, Phone, Users, Car, Sparkles } from 'lucide-react';
 import type { BookingFormData } from '../types';
 import { openWhatsAppBooking } from '../utils/whatsapp';
 import { FLEET, SERVICES } from '../config/siteConfig';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface BookingFormModalProps {
   isOpen: boolean;
@@ -261,7 +262,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               type="submit"
               className="w-full flex items-center justify-center gap-3 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-xl shadow-emerald-600/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <MessageSquare className="w-5 h-5 fill-white/20" />
+              <WhatsAppIcon className="w-5 h-5" />
               <span>BOOK ON WHATSAPP NOW</span>
             </button>
             <p className="text-[11px] text-center text-slate-500 font-medium mt-2">

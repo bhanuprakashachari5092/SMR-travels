@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 interface CTAProps {
@@ -47,7 +48,7 @@ export const CTA: React.FC<CTAProps> = ({ onOpenBooking }) => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-semibold text-sm text-white bg-emerald-600 hover:bg-emerald-500 border border-emerald-500/30 shadow-lg shadow-emerald-600/30 transition-all duration-300 transform hover:-translate-y-0.5"
             >
-              <MessageSquare className="w-4 h-4 fill-white/20" />
+              <WhatsAppIcon className="w-4.5 h-4.5" />
               <span>WhatsApp Us</span>
             </a>
           </div>
