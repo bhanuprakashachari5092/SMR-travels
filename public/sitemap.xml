@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage & Core Landing -->
+  <url>
+    <loc>https://smrcartravels.com/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/innova-hero.png</image:loc>
+      <image:title>SMR Car Travels - Toyota Innova Crysta Luxury Chauffeur Vehicle</image:title>
+      <image:caption>Premium car rental and outstation taxi service with verified chauffeurs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/smr-logo-transparent.png</image:loc>
+      <image:title>SMR Car Travels Official Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- Travel Services -->
+  <url>
+    <loc>https://smrcartravels.com/#services</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Luxury Fleet (Sedan, SUV, Innova Crysta, Ertiga, Tempo Traveller, Minibus) -->
+  <url>
+    <loc>https://smrcartravels.com/#fleet</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/about/ertiga.png</image:loc>
+      <image:title>Suzuki Ertiga 7 Seater Luxury Taxi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/about/dzire.png</image:loc>
+      <image:title>Swift Dzire Executive Sedan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/about/traveller.png</image:loc>
+      <image:title>Force Tempo Traveller 12-17 Seater</image:title>
+    </image:image>
+  </url>
+
+  <!-- Google Maps Location & Headquarters -->
+  <url>
+    <loc>https://smrcartravels.com/#location</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Why Choose Us -->
+  <url>
+    <loc>https://smrcartravels.com/#why-us</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About SMR Travels & Leadership -->
+  <url>
+    <loc>https://smrcartravels.com/#about</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://smrcartravels.com/images/smr-owner-office.jpg</image:loc>
+      <image:title>SMR Car Travels Headquarters & Executive Desk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact & 24/7 Booking Support -->
+  <url>
+    <loc>https://smrcartravels.com/#footer</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

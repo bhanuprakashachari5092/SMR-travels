@@ -1,0 +1,6 @@
+# Robots.txt for SMR Car Travels
+User-agent: *
+Allow: /
+
+# Direct Sitemap Reference
+Sitemap: https://smrcartravels.com/sitemap.xml
