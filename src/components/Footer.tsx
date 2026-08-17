@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <li><a href="#hero" className="hover:text-[#00D8F6] transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-[#00D8F6] transition-colors">Services</a></li>
               <li><a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Our Fleet</a></li>
-              <li><a href="#why-us" className="hover:text-[#00D8F6] transition-colors">Why Choose Us</a></li>
+              <li><a href="#location" className="hover:text-[#00D8F6] transition-colors">Location & Map</a></li>
               <li><a href="#about" className="hover:text-[#00D8F6] transition-colors">About Us</a></li>
             </ul>
           </div>
@@ -88,9 +88,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 </a>
               </li>
 
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2.5 group">
                 <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-xs leading-relaxed">{SITE_CONFIG.address}</span>
+                <div className="flex flex-col space-y-1">
+                  <a
+                    href={SITE_CONFIG.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs leading-relaxed text-slate-300 hover:text-[#00D8F6] transition-colors flex items-center gap-1.5"
+                  >
+                    <span>{SITE_CONFIG.address}</span>
+                  </a>
+                  <a
+                    href={SITE_CONFIG.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#00D8F6] hover:underline"
+                  >
+                    <span>View on Google Maps</span>
+                    <span className="text-[10px]">↗</span>
+                  </a>
+                </div>
               </li>
 
               <li className="flex items-start gap-2.5">

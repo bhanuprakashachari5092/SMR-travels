@@ -8,7 +8,10 @@ export const SITE_CONFIG = {
   contactPhone: '+91 99895 99621',
   contactPhone2: '+91 98664 34621',
   contactEmail: 'smdr.143@gmail.com',
-  address: 'SMR Car Travels Head Office, Main Transport Hub, Metro Road, City Center',
+  address: 'SMR Car Travels Head Office, Main Road, Transport Hub',
+  googleMapsUrl: 'https://share.google/6anNfeqjn6zQp31wY',
+  googleMapsEmbedUrl: 'https://maps.google.com/maps?q=SMR+CAR+TRAVELS&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  googleMapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=SMR+CAR+TRAVELS',
   openingHours: '24/7 Round-the-Clock Service',
   socialLinks: {
     facebook: '#',

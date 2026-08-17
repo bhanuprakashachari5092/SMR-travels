@@ -22,6 +22,10 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
                 <img
                   src="/images/smr-owner-office.jpg"
                   alt="SMR Car Travels Leadership & Executive Headquarters"
+                  loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={400}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 brightness-[1.02]"
                 />
 

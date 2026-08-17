@@ -2,6 +2,29 @@ import React from 'react';
 import { Shield, CheckCircle2 } from 'lucide-react';
 
 export const VideoSection: React.FC = () => {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="relative py-12 md:py-20 bg-linear-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
       {/* Soft Cyan Ambient Glow Highlights */}
@@ -14,10 +37,11 @@ export const VideoSection: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden bg-white/80 backdrop-blur-xl border border-slate-200/90 shadow-2xl shadow-blue-500/15 group p-2.5 sm:p-4">
               <div className="relative aspect-video sm:aspect-4/3 rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
-                {/* Autoplay Muted Loop Video without Audio (PiP & Enhancements Restricted) */}
+                {/* Autoplay Muted Loop Video with Performance Intersection & Preload */}
                 <video
+                  ref={videoRef}
                   src="/SMR travels.mp4"
-                  autoPlay
+                  preload="metadata"
                   loop
                   muted
                   playsInline

@@ -1,21 +1,24 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { ScrollProgress } from './components/ScrollProgress';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { QuickSearchWidget } from './components/QuickSearchWidget';
 import { VideoSection } from './components/VideoSection';
 import { FounderSection } from './components/FounderSection';
-import { BookingFormModal } from './components/BookingFormModal';
 import { Services } from './components/Services';
 import { Fleet } from './components/Fleet';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { BookingProcess } from './components/BookingProcess';
 import { Stats } from './components/Stats';
 import { Testimonials } from './components/Testimonials';
+import { LocationSection } from './components/LocationSection';
 import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
+
+// Lazy load booking modal to keep initial bundle size tiny and ultra-fast
+const BookingFormModal = lazy(() => import('./components/BookingFormModal').then(module => ({ default: module.BookingFormModal })));
 
 export function App() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -76,6 +79,9 @@ export function App() {
         {/* Brand Promise & About Us */}
         <About onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
+        {/* 📍 SMR Car Travels Google Maps & Location Section */}
+        <LocationSection onOpenBooking={() => handleOpenBooking()} />
+
         {/* Verified Customer Testimonials (Moved to Bottom) */}
         <Testimonials />
 
@@ -89,13 +95,17 @@ export function App() {
       {/* Fixed Sticky Floating WhatsApp Button */}
       <WhatsAppButton onOpenBooking={() => handleOpenBooking()} />
 
-      {/* Interactive WhatsApp Booking Modal */}
-      <BookingFormModal
-        isOpen={isBookingModalOpen}
-        onClose={() => setIsBookingModalOpen(false)}
-        preselectedCar={preselectedCar}
-        preselectedService={preselectedService}
-      />
+      {/* Interactive WhatsApp Booking Modal - Loaded on-demand */}
+      {isBookingModalOpen && (
+        <Suspense fallback={null}>
+          <BookingFormModal
+            isOpen={isBookingModalOpen}
+            onClose={() => setIsBookingModalOpen(false)}
+            preselectedCar={preselectedCar}
+            preselectedService={preselectedService}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

@@ -7,6 +7,7 @@
     <link rel="apple-touch-icon" href="/images/smr-logo-transparent.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#1769FF" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
     
     <!-- SEO Meta Tags -->
     <title>SMR Car Travels | Premium Car Rental & Outstation Taxi Booking</title>
@@ -19,14 +20,21 @@
     <meta property="og:description" content="Premium, comfortable and professional car travel experiences tailored for local and outstation journeys." />
     <meta property="og:image" content="/images/smr-logo.jpg" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- DNS Prefetch & Preconnect for High-Speed Asset Delivery -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://maps.google.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload Critical Hero Image for Instant LCP -->
+    <link rel="preload" as="image" href="/images/innova-hero.png" fetchpriority="high" type="image/png" />
+
+    <!-- Google Fonts with display=swap for zero font-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-white text-slate-900 font-sans antialiased selection:bg-[#1769FF] selection:text-white overflow-x-hidden min-h-screen">
+  <body class="bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-[#1769FF] selection:text-white overflow-x-hidden min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

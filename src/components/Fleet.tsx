@@ -67,6 +67,10 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
                 <img
                   src={car.image}
                   alt={car.name}
+                  loading="lazy"
+                  decoding="async"
+                  width={340}
+                  height={220}
                   className="max-h-50 sm:max-h-57.5 w-auto object-contain transform group-hover:scale-105 transition-transform duration-700 drop-shadow-[0_12px_24px_rgba(11,31,58,0.15)]"
                 />
 

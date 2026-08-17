@@ -97,6 +97,10 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
                   key={SLIDE_VEHICLES[currentSlide].image}
                   src={SLIDE_VEHICLES[currentSlide].image}
                   alt={SLIDE_VEHICLES[currentSlide].name}
+                  loading="lazy"
+                  decoding="async"
+                  width={340}
+                  height={220}
                   className="max-h-55 sm:max-h-65 max-w-[90%] w-auto object-contain transform transition-all duration-700 ease-in-out group-hover:scale-105 drop-shadow-[0_16px_28px_rgba(11,31,58,0.16)] animate-in fade-in zoom-in-95"
                 />
               </div>

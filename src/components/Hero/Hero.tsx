@@ -21,19 +21,23 @@ export const Hero: React.FC<HeroProps> = () => {
           {/* Left Column - Toyota Innova Crysta Vehicle Image */}
           <div className="lg:col-span-6 order-1 relative flex flex-col items-center justify-center">
             {/* Soft Ambient Radial Glow Directly in Hero Background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 sm:w-135 sm:h-135 bg-linear-to-tr from-[#1769FF]/25 via-[#00B8D9]/20 to-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 sm:w-140 sm:h-140 bg-linear-to-tr from-[#1769FF]/30 via-[#00B8D9]/25 to-blue-400/15 rounded-full blur-3xl pointer-events-none" />
 
             {/* Toyota Innova Crysta Vehicle Image */}
             <div className="relative w-full py-4 sm:py-8 flex items-center justify-center z-10 group">
               {/* Ground Shadow & Ambient Blue Ground Lighting Reflection */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[85%] h-14 bg-blue-600/20 rounded-[100%] blur-2xl pointer-events-none" />
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[85%] h-14 bg-linear-to-r from-blue-600/30 via-cyan-500/25 to-blue-600/30 rounded-[100%] blur-2xl pointer-events-none" />
               <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[75%] h-6 bg-black/25 rounded-[100%] blur-lg pointer-events-none" />
 
-              {/* Innova Crysta Image */}
+              {/* Innova Crysta Image with glowing edges */}
               <img
                 src="/images/innova-hero.png"
                 alt="SMR Car Travels Toyota Innova Crysta Luxury Chauffeur Vehicle"
-                className="w-full max-w-155 h-auto object-contain transform group-hover:scale-105 transition-transform duration-700 drop-shadow-[0_30px_35px_rgba(11,31,58,0.18)] relative z-10"
+                fetchPriority="high"
+                decoding="async"
+                width={620}
+                height={360}
+                className="w-full max-w-155 h-auto object-contain transform group-hover:scale-105 transition-transform duration-700 hero-car-edge-glow relative z-10"
               />
             </div>
           </div>

@@ -134,4 +134,61 @@
   animation: foglightPulse 1.8s ease-in-out infinite;
 }
 
+/* Hero Car Edge & Silhouette Glow */
+@keyframes carRimGlow {
+  0%, 100% {
+    filter: 
+      drop-shadow(0 0 8px rgba(0, 184, 217, 0.45))
+      drop-shadow(0 0 20px rgba(23, 105, 255, 0.28))
+      drop-shadow(0 25px 35px rgba(11, 31, 58, 0.20));
+  }
+  50% {
+    filter: 
+      drop-shadow(0 0 15px rgba(0, 184, 217, 0.70))
+      drop-shadow(0 0 32px rgba(23, 105, 255, 0.45))
+      drop-shadow(0 25px 35px rgba(11, 31, 58, 0.25));
+  }
+}
+
+.hero-car-edge-glow {
+  animation: carRimGlow 3.5s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-car-edge-glow:hover {
+  filter: 
+    drop-shadow(0 0 18px rgba(0, 184, 217, 0.85))
+    drop-shadow(0 0 38px rgba(23, 105, 255, 0.60))
+    drop-shadow(0 30px 40px rgba(11, 31, 58, 0.30)) !important;
+}
+
+/* ==========================================================================
+   High-Performance Rendering & Responsive Speed Tweaks
+   ========================================================================== */
+
+/* GPU Accelerated Smooth Rendering */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Content Visibility Optimization for offscreen sections */
+#why-us, #testimonials, #location, #footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
+}
+
+/* Reduce image reflow layout shifts */
+img {
+  max-width: 100%;
+}
+
+/* Prevent accidental text selection lag on mobile touch */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+
 
