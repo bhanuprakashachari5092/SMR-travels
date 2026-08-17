@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Direct Sitemap Reference
-Sitemap: https://smrcartravels.com/sitemap.xml
+Sitemap: https://smrcartravels.in/sitemap.xml
