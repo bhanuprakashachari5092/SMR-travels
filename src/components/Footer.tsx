@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           {/* Brand Info (4 Cols) */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#hero">
-              <SMRLogo size="md" darkBackground={true} />
+              <SMRLogo size="lg" darkBackground={true} />
             </a>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm pt-2">

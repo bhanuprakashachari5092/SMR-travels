@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SMRLogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   darkBackground?: boolean;
 }
 
@@ -11,16 +11,18 @@ export const SMRLogo: React.FC<SMRLogoProps> = ({
   size = 'md',
   darkBackground = false
 }) => {
-  const sizeStyles: Record<'sm' | 'md' | 'lg', { height: string; maxHeight: string }> = {
-    sm: { height: '36px', maxHeight: '36px' },
-    md: { height: '48px', maxHeight: '48px' },
-    lg: { height: '64px', maxHeight: '64px' },
+  const sizeStyles: Record<'sm' | 'md' | 'lg' | 'xl', { height: string; maxHeight: string }> = {
+    sm: { height: '42px', maxHeight: '42px' },
+    md: { height: '58px', maxHeight: '58px' },
+    lg: { height: '74px', maxHeight: '74px' },
+    xl: { height: '90px', maxHeight: '90px' },
   };
 
   const heightClasses = {
-    sm: 'h-8 sm:h-9 max-h-9',
-    md: 'h-10 sm:h-12 max-h-12',
-    lg: 'h-14 sm:h-16 max-h-16',
+    sm: 'h-9 sm:h-10 max-h-10',
+    md: 'h-12 sm:h-14 md:h-[58px] max-h-[58px]',
+    lg: 'h-16 sm:h-18 md:h-[74px] max-h-[74px]',
+    xl: 'h-20 sm:h-22 md:h-[90px] max-h-[90px]',
   };
 
   return (
@@ -31,8 +33,8 @@ export const SMRLogo: React.FC<SMRLogoProps> = ({
         style={{ height: sizeStyles[size].height, maxHeight: sizeStyles[size].maxHeight, width: 'auto' }}
         className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
           darkBackground 
-            ? 'brightness-125 contrast-125 drop-shadow-[0_2px_10px_rgba(255,255,255,0.85)]' 
-            : 'drop-shadow-[0_4px_12px_rgba(23,105,255,0.15)]'
+            ? 'brightness-125 contrast-125 drop-shadow-[0_2px_12px_rgba(255,255,255,0.9)]' 
+            : 'drop-shadow-[0_4px_14px_rgba(23,105,255,0.18)]'
         }`}
       />
     </div>
