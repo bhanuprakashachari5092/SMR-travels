@@ -15,15 +15,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 25) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
 
-      // Track active section for active nav link indicator
+      // Track active section for iOS segmented switch
       const sections = ['hero', 'services', 'fleet', 'location', 'faqs', 'about'];
-      const scrollPos = window.scrollY + 200;
+      const scrollPos = window.scrollY + 220;
 
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     { name: 'Home', href: '#hero', id: 'hero' },
     { name: 'Services', href: '#services', id: 'services', icon: Sparkles },
     { name: 'Fleet', href: '#fleet', id: 'fleet', icon: Car },
-    { name: 'GPS Location', href: '#location', id: 'location', icon: MapPin },
+    { name: 'Location', href: '#location', id: 'location', icon: MapPin },
     { name: 'FAQs', href: '#faqs', id: 'faqs', icon: HelpCircle },
     { name: 'About', href: '#about', id: 'about', icon: ShieldCheck },
   ];
@@ -57,48 +57,51 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? 'py-2.5 sm:py-3'
+          ? 'py-2 sm:py-3'
           : 'py-3.5 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
-        {/* Floating Capsule Glass Card */}
+        {/* iPhone Floating Liquid Glass Capsule */}
         <div
-          className={`relative rounded-2xl sm:rounded-full transition-all duration-500 border ${
+          className={`relative rounded-full transition-all duration-500 ease-out ${
             isScrolled
-              ? 'bg-white/95 backdrop-blur-2xl shadow-xl shadow-blue-500/10 border-slate-200/90 py-2 sm:py-2.5 px-3.5 sm:px-5 ring-1 ring-slate-900/5'
-              : 'bg-white/85 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-white/80 py-2.5 sm:py-3 px-4 sm:px-6'
+              ? 'ios-glass-scrolled py-2 sm:py-2 px-3.5 sm:px-5'
+              : 'ios-glass-capsule py-2.5 sm:py-2.5 px-4 sm:px-6'
           }`}
         >
-          {/* Subtle Ambient Top Shimmer Line */}
-          <div className="absolute top-0 inset-x-8 h-[1.5px] bg-linear-to-r from-transparent via-[#1769FF]/30 to-transparent pointer-events-none rounded-full" />
+          {/* iOS Specular Glass Surface Refraction Line */}
+          <div className="absolute top-0 inset-x-10 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none opacity-90 rounded-full" />
 
           <div className="flex items-center justify-between gap-2 sm:gap-4">
             
-            {/* Brand Logo & Live Status */}
+            {/* Brand Logo & iOS Dynamic Status Pill */}
             <div className="flex items-center gap-3 shrink-0">
               <a
                 href="#hero"
-                className="group flex items-center transition-transform duration-300 hover:scale-[1.02]"
+                className="group flex items-center transition-transform duration-300 active:scale-95"
                 aria-label="SMR Car Travels Home"
               >
                 <SMRLogo size="md" />
               </a>
 
-              {/* 24/7 Live Pill for Extra Trust */}
-              <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-extrabold border border-emerald-200/80 shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                <span>24/7 Anantapur Active</span>
+              {/* iOS Style Live Dynamic Status Badge */}
+              <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.03] border border-black/[0.06] backdrop-blur-md shadow-inner text-[11px] font-bold text-slate-800">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                <span>24/7 Anantapur</span>
               </div>
             </div>
 
-            {/* Desktop Navigation Links */}
+            {/* iOS Segmented Navigation Pill Switcher */}
             <nav
               aria-label="Main Navigation"
-              className="hidden lg:flex items-center gap-1 p-1 rounded-full bg-slate-100/70 border border-slate-200/80 backdrop-blur-md shadow-inner"
+              className="hidden lg:flex items-center gap-0.5 p-1 rounded-full ios-segmented-container backdrop-blur-xl"
             >
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
@@ -106,10 +109,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-300 ${
+                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-300 ease-out select-none ${
                       isActive
-                        ? 'text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/25'
-                        : 'text-[#0B1F3A] hover:text-[#1769FF] hover:bg-white/90'
+                        ? 'text-[#0B1F3A] bg-white shadow-md shadow-slate-900/8 scale-100 font-extrabold ring-1 ring-black/5'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/40'
                     }`}
                   >
                     <span>{link.name}</span>
@@ -118,16 +121,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               })}
             </nav>
 
-            {/* Desktop Quick Actions */}
+            {/* iPhone Style Right Action Buttons */}
             <div className="hidden md:flex items-center gap-2 lg:gap-2.5">
               
               {/* Call Us Button */}
               <a
                 href={`tel:${SITE_CONFIG.contactPhone}`}
                 title={`Call ${SITE_CONFIG.contactPhone}`}
-                className="group inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full font-extrabold text-xs text-[#0B1F3A] bg-slate-50 hover:bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#1769FF]/40 hover:text-[#1769FF] transition-all duration-300"
+                className="group ios-glass-button inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full font-bold text-xs text-[#0B1F3A] hover:bg-white transition-all duration-300 active:scale-95 shadow-sm"
               >
-                <div className="w-5 h-5 rounded-full bg-blue-50 text-[#1769FF] flex items-center justify-center group-hover:bg-[#1769FF] group-hover:text-white transition-colors">
+                <div className="w-5 h-5 rounded-full bg-[#1769FF]/10 text-[#1769FF] flex items-center justify-center group-hover:bg-[#1769FF] group-hover:text-white transition-colors">
                   <Phone className="w-3 h-3" />
                 </div>
                 <span>Call Us</span>
@@ -139,50 +142,50 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instant WhatsApp Booking"
-                className="group inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full font-extrabold text-xs text-white bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full font-bold text-xs text-white bg-linear-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-md shadow-emerald-600/25 transition-all duration-300 active:scale-95"
               >
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>WhatsApp</span>
               </a>
 
-              {/* Book Ride Button */}
+              {/* Book Ride Button (iOS Electric Blue Glow) */}
               <button
                 onClick={() => onOpenBooking && onOpenBooking()}
-                className="group relative inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full font-black text-xs text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-lg shadow-blue-500/25 hover:shadow-cyan-500/35 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full font-black text-xs text-white bg-linear-to-r from-[#1769FF] via-[#0A84FF] to-[#00B8D9] hover:from-[#0070E0] hover:to-[#00B8D9] shadow-lg shadow-blue-500/25 hover:shadow-cyan-500/35 transition-all duration-300 active:scale-95 overflow-hidden"
               >
-                {/* Glowing Shimmer */}
-                <div className="absolute inset-0 w-1/2 h-full bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-300 transition-transform duration-1000" />
+                {/* Specular Shimmer */}
+                <div className="absolute inset-0 w-1/2 h-full bg-white/25 skew-x-12 -translate-x-full group-hover:translate-x-300 transition-transform duration-1000" />
                 <span className="relative z-10">Book Ride</span>
                 <ArrowRight className="w-3.5 h-3.5 relative z-10 group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
 
-            {/* Mobile Quick Action Buttons & Hamburger Menu */}
+            {/* Mobile Quick Action Buttons & Hamburger */}
             <div className="flex md:hidden items-center gap-1.5">
-              {/* Call Icon */}
+              {/* Call Icon Button */}
               <a
                 href={`tel:${SITE_CONFIG.contactPhone}`}
-                className="p-2 rounded-full bg-blue-50 text-[#1769FF] border border-blue-100 shadow-xs active:scale-95 transition-transform"
+                className="p-2 rounded-full ios-glass-button text-[#1769FF] active:scale-90 transition-transform"
                 aria-label="Call SMR Travels"
               >
                 <Phone className="w-3.5 h-3.5" />
               </a>
 
-              {/* WhatsApp Icon */}
+              {/* WhatsApp Icon Button */}
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-emerald-600 text-white shadow-xs active:scale-95 transition-transform"
+                className="p-2 rounded-full bg-emerald-600 text-white shadow-xs active:scale-90 transition-transform"
                 aria-label="WhatsApp SMR Travels"
               >
                 <WhatsAppIcon className="w-3.5 h-3.5" />
               </a>
 
-              {/* Book Ride CTA Button */}
+              {/* Book Ride Button */}
               <button
                 onClick={() => onOpenBooking && onOpenBooking()}
-                className="px-3.5 py-1.5 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-95 transition-transform"
+                className="px-3.5 py-1.5 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-90 transition-transform"
               >
                 Book
               </button>
@@ -190,7 +193,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {/* Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-full bg-slate-100 text-[#0B1F3A] border border-slate-200 focus:outline-none active:scale-95 transition-transform"
+                className="p-2 rounded-full ios-glass-button text-[#0B1F3A] active:scale-90 transition-transform focus:outline-none"
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -199,9 +202,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           </div>
 
-          {/* Mobile Drawer Dropdown Menu */}
+          {/* iOS Sheet Mobile Drawer */}
           {mobileMenuOpen && (
-            <div className="md:hidden pt-4 pb-2 mt-3 border-t border-slate-200/80 space-y-4 animate-in slide-in-from-top-2 duration-300">
+            <div className="md:hidden pt-4 pb-2 mt-3 border-t border-black/[0.08] space-y-4 animate-in slide-in-from-top-2 duration-300">
               
               {/* Mobile Navigation Links */}
               <nav className="grid grid-cols-2 gap-1.5">
@@ -213,10 +216,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                       key={link.name}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-extrabold transition-colors ${
+                      className={`flex items-center gap-2 px-3 py-2 rounded-2xl text-xs font-bold transition-all ${
                         isActive
-                          ? 'text-[#1769FF] bg-blue-50 border border-blue-200/80'
-                          : 'text-slate-700 hover:bg-slate-50'
+                          ? 'text-[#1769FF] bg-white shadow-sm border border-black/5 font-black'
+                          : 'text-slate-700 hover:bg-white/50'
                       }`}
                     >
                       {Icon && <Icon className="w-3.5 h-3.5 text-[#1769FF]" />}
@@ -227,11 +230,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               </nav>
 
               {/* Mobile Action Buttons */}
-              <div className="pt-2 border-t border-slate-200/80 flex flex-col gap-2">
+              <div className="pt-2 border-t border-black/[0.08] flex flex-col gap-2">
                 <div className="grid grid-cols-2 gap-2">
                   <a
                     href={`tel:${SITE_CONFIG.contactPhone}`}
-                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs text-[#0B1F3A] bg-slate-50 border border-slate-200 hover:bg-slate-100"
+                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-2xl font-bold text-xs text-[#0B1F3A] ios-glass-button"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#1769FF]" />
                     <span>Call 1</span>
@@ -239,7 +242,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
                   <a
                     href={`tel:${SITE_CONFIG.contactPhone2}`}
-                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs text-[#0B1F3A] bg-slate-50 border border-slate-200 hover:bg-slate-100"
+                    className="flex items-center justify-center gap-1.5 py-2.5 rounded-2xl font-bold text-xs text-[#0B1F3A] ios-glass-button"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#1769FF]" />
                     <span>Call 2</span>
@@ -250,10 +253,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-bold text-xs text-white bg-linear-to-r from-emerald-600 to-teal-600 shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-2xl font-bold text-xs text-white bg-linear-to-r from-emerald-600 to-teal-500 shadow-md"
                 >
                   <WhatsAppIcon className="w-4 h-4 text-white" />
-                  <span>Chat on WhatsApp (30s Booking)</span>
+                  <span>Chat on WhatsApp (Instant)</span>
                 </a>
 
                 <button
@@ -261,7 +264,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     setMobileMenuOpen(false);
                     if (onOpenBooking) onOpenBooking();
                   }}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] shadow-lg shadow-blue-500/20"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-2xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] via-[#0A84FF] to-[#00B8D9] shadow-lg shadow-blue-500/20"
                 >
                   <span>Book Ride Online</span>
                   <ArrowRight className="w-4 h-4" />
