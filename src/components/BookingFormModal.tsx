@@ -100,7 +100,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="e.g. Rahul Sharma"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -116,7 +116,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="e.g. +91 98765 43210"
                 value={formData.mobile}
                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -132,7 +132,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="City, Landmark or Address"
                 value={formData.pickupLocation}
                 onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -148,7 +148,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 placeholder="Destination City or Airport"
                 value={formData.dropLocation}
                 onChange={(e) => setFormData({ ...formData, dropLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -252,7 +252,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               placeholder="e.g. Need child seat, extra luggage space, special flight pickup..."
               value={formData.additionalMessage}
               onChange={(e) => setFormData({ ...formData, additionalMessage: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder-slate-400 font-medium"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
             />
           </div>
 

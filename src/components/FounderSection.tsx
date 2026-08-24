@@ -17,11 +17,22 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
           
           {/* Left Column - Founder & Executive Desk Showcase */}
           <div className="lg:col-span-6 relative order-1">
-            <div className="relative rounded-3xl overflow-hidden bg-white/80 backdrop-blur-xl border border-slate-200/90 shadow-2xl shadow-blue-500/15 group p-2.5 sm:p-4">
+            <figure
+              itemScope
+              itemType="https://schema.org/Person"
+              className="relative rounded-3xl overflow-hidden bg-white/80 backdrop-blur-xl border border-slate-200/90 shadow-2xl shadow-blue-500/15 group p-2.5 sm:p-4"
+            >
+              <meta itemProp="name" content="Mohammad Rafi" />
+              <meta itemProp="jobTitle" content="Founder & Managing Director" />
+              <meta itemProp="worksFor" content="SMR Car Travels" />
+              <meta itemProp="address" content="Anantapur, Andhra Pradesh" />
+
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
                 <img
                   src="/images/smr-owner-office.jpg"
-                  alt="Mohammad Rafi - Founder & Managing Director of SMR Car Travels Anantapur"
+                  alt="Mohammad Rafi - Founder & Managing Director of SMR Car Travels Anantapur | Best ATP Car Travels & Taxi Service"
+                  title="Mohammad Rafi - SMR Car Travels Anantapur (ATP Travels)"
+                  itemProp="image"
                   loading="lazy"
                   decoding="async"
                   width={600}
@@ -37,7 +48,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
                     </div>
                     <div>
                       <h4 className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">Mohammad Rafi</h4>
-                      <p className="text-xs font-semibold text-slate-600">Founder & Managing Director • Anantapur</p>
+                      <p className="text-xs font-semibold text-slate-600">Founder & Managing Director • Anantapur (ATP)</p>
                     </div>
                   </div>
                   <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
@@ -46,7 +57,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
                   </div>
                 </div>
               </div>
-            </div>
+            </figure>
           </div>
 
           {/* Right Column - Leadership Promise Copy & Features */}
@@ -70,7 +81,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
 
             {/* Subtext */}
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
-              Founded and personally managed by <strong className="text-slate-900 font-bold">Mohammad Rafi</strong> in <strong className="text-slate-900 font-bold">Anantapur</strong>, SMR Car Travels has earned the trust of over 1,000+ local families, business leaders, and outstation travelers. Every trip is backed by personal accountability, verified drivers, pristine AC vehicles, and punctual service.
+              Founded and personally managed by <strong className="text-slate-900 font-bold">Mohammad Rafi</strong> in <strong className="text-slate-900 font-bold">Anantapur (ATP)</strong>, SMR Car Travels has earned the trust of over 1,000+ local families, business leaders, and outstation travelers. Recognized as the top-rated <strong className="text-slate-900 font-bold">Anantapur car travels</strong> and <strong className="text-slate-900 font-bold">ATP travels</strong> service, every trip is backed by personal accountability, verified drivers, pristine AC vehicles, and punctual service.
             </p>
 
             {/* Core Feature Highlights */}

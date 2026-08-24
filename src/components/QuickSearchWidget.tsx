@@ -160,7 +160,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   value={pickupCity}
                   onChange={(e) => setPickupCity(e.target.value)}
                   placeholder="Enter Pickup City / Address"
-                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder-slate-400 font-sans"
+                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-400 font-sans"
                   required
                 />
               </div>
@@ -193,7 +193,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   value={dropCity}
                   onChange={(e) => setDropCity(e.target.value)}
                   placeholder="Enter Drop City / Destination"
-                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder-slate-400 font-sans"
+                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-400 font-sans"
                   required
                 />
               </div>

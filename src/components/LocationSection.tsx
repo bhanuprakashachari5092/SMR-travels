@@ -40,10 +40,10 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
           
           {/* Left Column: Interactive Embedded Google Map (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col">
-            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl shadow-blue-500/10 p-2 sm:p-3 flex-1 flex flex-col min-h-[380px] sm:min-h-[440px]">
+            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl shadow-blue-500/10 p-2 sm:p-3 flex-1 flex flex-col min-h-95 sm:min-h-110">
               
               {/* Map Container */}
-              <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-100 min-h-[340px]">
+              <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-100 min-h-85">
                 <iframe
                   title="SMR Car Travels by Mohammad Rafi Anantapur Google Map Location"
                   src={SITE_CONFIG.googleMapsEmbedUrl}
@@ -53,7 +53,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full min-h-[340px] absolute inset-0"
+                  className="w-full h-full min-h-85 absolute inset-0"
                 />
 
                 {/* Floating "Direct Location" pill on top of map */}

@@ -2,6 +2,7 @@ import type { CarModel, ServiceItem, Testimonial, StatItem, WhyChooseUsItem } fr
 
 export const SITE_CONFIG = {
   brandName: 'SMR CAR TRAVELS',
+  siteUrl: 'https://smrcartravels.in',
   founderName: 'Mohammad Rafi',
   founderTitle: 'Founder & Managing Director',
   locationCity: 'Anantapur',
