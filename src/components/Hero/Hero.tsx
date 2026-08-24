@@ -5,7 +5,7 @@ interface HeroProps {
   onOpenBooking?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = () => {
+export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
     <section id="hero" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-linear-to-b from-white via-[#F8FAFC] to-[#EEF6FF]">
       {/* Soft Cyan & Blue Atmospheric Glow Highlights */}
@@ -91,13 +91,13 @@ export const Hero: React.FC<HeroProps> = () => {
 
             {/* Primary Action CTA Button */}
             <div className="pt-4">
-              <a
-                href="#fleet"
+              <button
+                onClick={onOpenBooking}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-xl shadow-blue-500/25 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 <span>Book Your Ride</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </button>
             </div>
 
             {/* Quick Micro Stat Badge */}
@@ -118,5 +118,3 @@ export const Hero: React.FC<HeroProps> = () => {
     </section>
   );
 };
-
-

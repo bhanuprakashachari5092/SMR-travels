@@ -17,10 +17,6 @@ import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
-import { FestivalBanner } from './components/FestivalTheme/FestivalBanner';
-import { FestivalFloatingEffects } from './components/FestivalTheme/FestivalFloatingEffects';
-import { FestivalSwitcherModal } from './components/FestivalTheme/FestivalSwitcherModal';
-import { getActiveFestival } from './utils/festivalCalendar';
 
 // Lazy load booking modal to keep initial bundle size tiny and ultra-fast
 const BookingFormModal = lazy(() => import('./components/BookingFormModal').then(module => ({ default: module.BookingFormModal })));
@@ -29,13 +25,6 @@ export function App() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [preselectedCar, setPreselectedCar] = useState<string>('');
   const [preselectedService, setPreselectedService] = useState<string>('');
-
-  // Festival Theme Engine State
-  const [previewFestivalId, setPreviewFestivalId] = useState<string | null>(null);
-  const [isBannerDismissed, setIsBannerDismissed] = useState(false);
-  const [isSwitcherOpen, setIsSwitcherOpen] = useState(false);
-
-  const activeFestival = getActiveFestival(previewFestivalId);
 
   const handleOpenBooking = (carName?: string) => {
     if (carName) {
@@ -53,22 +42,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-[#0B1F3A] font-sans relative overflow-x-hidden selection:bg-[#1769FF] selection:text-white">
-      {/* Dynamic Festival Floating Micro Particle Effects */}
-      <FestivalFloatingEffects festival={activeFestival} />
-
       {/* Top Scroll Indicator */}
       <ScrollProgress />
-
-      {/* Dynamic Calendar-Based Festival Top Ribbon Banner */}
-      {activeFestival && !isBannerDismissed && (
-        <FestivalBanner
-          festival={activeFestival}
-          onOpenBooking={() => handleOpenBooking()}
-          onOpenSwitcher={() => setIsSwitcherOpen(true)}
-          onDismiss={() => setIsBannerDismissed(true)}
-          isPreviewMode={Boolean(previewFestivalId)}
-        />
-      )}
 
       {/* Main Glass Navigation Header */}
       <Navbar onOpenBooking={() => handleOpenBooking()} />
@@ -135,18 +110,6 @@ export function App() {
           />
         </Suspense>
       )}
-
-      {/* Festival Theme Switcher Modal for Interactive Testing */}
-      <FestivalSwitcherModal
-        isOpen={isSwitcherOpen}
-        onClose={() => setIsSwitcherOpen(false)}
-        activeFestival={activeFestival}
-        selectedPreviewId={previewFestivalId}
-        onSelectPreview={(id) => {
-          setPreviewFestivalId(id);
-          setIsBannerDismissed(false);
-        }}
-      />
     </div>
   );
 }
