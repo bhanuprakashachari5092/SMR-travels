@@ -20,18 +20,18 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold tracking-wider text-[#1769FF] uppercase shadow-2xs">
             <MapPin className="w-3.5 h-3.5" />
-            <span>OFFICIAL LOCATION & HEADQUARTERS</span>
+            <span>ANANTAPUR HEADQUARTERS & GOOGLE MAPS</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F3A] tracking-tight">
-            Find Us On{' '}
+            SMR Car Travels on{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] via-[#3157D5] to-[#00B8D9]">
               Google Maps
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-medium">
-            Visit our central office hub or easily navigate to SMR Car Travels for pickups, consultations, and fleet inspections.
+            Located in the heart of <strong className="text-slate-900 font-bold">Anantapur</strong>. Find SMR Car Travels by <strong className="text-slate-900 font-bold">Mohammad Rafi</strong> for local rentals, outstation trips, and airport cab transfers.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
               {/* Map Container */}
               <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-100 min-h-[340px]">
                 <iframe
-                  title="SMR Car Travels Google Map Location"
+                  title="SMR Car Travels by Mohammad Rafi Anantapur Google Map Location"
                   src={SITE_CONFIG.googleMapsEmbedUrl}
                   width="100%"
                   height="100%"
@@ -59,7 +59,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                 {/* Floating "Direct Location" pill on top of map */}
                 <div className="absolute top-4 left-4 right-4 sm:right-auto z-10 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-slate-200 text-xs font-bold text-[#0B1F3A]">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                  <span>SMR Car Travels • Live GPS Location</span>
+                  <span>SMR Car Travels • Anantapur Live GPS</span>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
               <div className="pt-3 px-1 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <span className="text-slate-500 font-medium flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-[#1769FF]" />
-                  <span>Interactive Map • Click to Navigate & Zoom</span>
+                  <span>Anantapur Main Hub • Live GPS Navigation</span>
                 </span>
 
                 <a
@@ -76,7 +76,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 font-bold text-[#1769FF] hover:text-[#1254D4] hover:underline"
                 >
-                  <span>Open Fullscreen Map</span>
+                  <span>Open in Google Maps App</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -96,11 +96,11 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 text-[11px] font-extrabold border border-emerald-200 flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                      Google Verified Business
+                      Google Verified Local Business
                     </span>
                   </div>
-                  <h3 className="text-xl font-extrabold text-[#0B1F3A]">{SITE_CONFIG.brandName}</h3>
-                  <p className="text-xs text-slate-500 font-medium">Car Rental & Luxury Travel Services</p>
+                  <h3 className="text-xl font-extrabold text-[#0B1F3A]">SMR Car Travels</h3>
+                  <p className="text-xs text-[#1769FF] font-bold">By Mohammad Rafi • Anantapur</p>
                 </div>
 
                 {/* Rating Badge */}
@@ -109,7 +109,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <span>4.9</span>
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   </div>
-                  <span className="text-[10px] text-amber-700 font-bold">1000+ Trips</span>
+                  <span className="text-[10px] text-amber-700 font-bold">1250+ Reviews</span>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Office Address</h4>
+                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Office Location (Anantapur)</h4>
                     <p className="text-xs text-slate-600 font-medium leading-relaxed">
                       {SITE_CONFIG.address}
                     </p>
@@ -135,9 +135,9 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <Clock className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Working Hours</h4>
+                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Service Coverage</h4>
                     <p className="text-xs text-slate-600 font-medium">
-                      24 Hours Open • 7 Days a Week (All Holidays Active)
+                      24/7 Cab Booking in Anantapur & All Outstation Corridors
                     </p>
                   </div>
                 </div>

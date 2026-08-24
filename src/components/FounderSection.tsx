@@ -21,7 +21,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
                 <img
                   src="/images/smr-owner-office.jpg"
-                  alt="SMR Car Travels Leadership & Executive Headquarters"
+                  alt="Mohammad Rafi - Founder & Managing Director of SMR Car Travels Anantapur"
                   loading="lazy"
                   decoding="async"
                   width={600}
@@ -30,14 +30,14 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
                 />
 
                 {/* Floating Micro Stat Badge over Image */}
-                <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-6 glass-panel bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-6 glass-panel bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-linear-to-tr from-[#1769FF] to-[#00B8D9] flex items-center justify-center text-white shadow-md">
                       <UserCheck className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">Direct Founder Oversight</h4>
-                      <p className="text-xs font-semibold text-slate-600">Personal Commitment to Every Trip</p>
+                      <h4 className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">Mohammad Rafi</h4>
+                      <p className="text-xs font-semibold text-slate-600">Founder & Managing Director • Anantapur</p>
                     </div>
                   </div>
                   <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
@@ -55,22 +55,22 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
             {/* Small Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200 text-xs font-extrabold tracking-wider text-[#1769FF] uppercase shadow-sm">
               <ShieldCheck className="w-4 h-4" />
-              <span>LEADERSHIP & PERSONAL COMMITMENT</span>
+              <span>LEADERSHIP & TRUSTED FOUNDER • ANANTAPUR</span>
             </div>
 
             {/* Section Heading */}
             <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B1F3A] leading-tight">
-                Driven By Integrity.{' '}
+                SMR Car Travels By{' '}
                 <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] via-[#3157D5] to-[#00B8D9]">
-                  Managed With Care.
+                  Mohammad Rafi
                 </span>
               </h2>
             </div>
 
             {/* Subtext */}
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
-              At SMR Car Travels, we believe travel is not just about reaching a destination—it’s about peace of mind. Every vehicle in our fleet is personally inspected, continuously maintained, and assigned to verified chauffeurs.
+              Founded and personally managed by <strong className="text-slate-900 font-bold">Mohammad Rafi</strong> in <strong className="text-slate-900 font-bold">Anantapur</strong>, SMR Car Travels has earned the trust of over 1,000+ local families, business leaders, and outstation travelers. Every trip is backed by personal accountability, verified drivers, pristine AC vehicles, and punctual service.
             </p>
 
             {/* Core Feature Highlights */}

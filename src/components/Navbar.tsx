@@ -28,9 +28,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     { name: 'Home', href: '#hero' },
     { name: 'Services', href: '#services' },
     { name: 'Our Fleet', href: '#fleet' },
-    { name: 'Location', href: '#location' },
+    { name: 'Google Maps', href: '#location' },
+    { name: 'FAQs', href: '#faqs' },
     { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#footer' },
   ];
 
   const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(

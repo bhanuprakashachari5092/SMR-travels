@@ -12,6 +12,7 @@ import { BookingProcess } from './components/BookingProcess';
 import { Stats } from './components/Stats';
 import { Testimonials } from './components/Testimonials';
 import { LocationSection } from './components/LocationSection';
+import { FAQSection } from './components/FAQSection';
 import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
@@ -81,6 +82,9 @@ export function App() {
 
         {/* 📍 SMR Car Travels Google Maps & Location Section */}
         <LocationSection onOpenBooking={() => handleOpenBooking()} />
+
+        {/* ❓ High-Intent Local SEO FAQ Section for Anantapur Travel */}
+        <FAQSection onOpenBooking={() => handleOpenBooking()} />
 
         {/* Verified Customer Testimonials (Moved to Bottom) */}
         <Testimonials />

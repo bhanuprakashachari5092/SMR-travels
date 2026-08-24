@@ -2,17 +2,21 @@ import type { CarModel, ServiceItem, Testimonial, StatItem, WhyChooseUsItem } fr
 
 export const SITE_CONFIG = {
   brandName: 'SMR CAR TRAVELS',
+  founderName: 'Mohammad Rafi',
+  founderTitle: 'Founder & Managing Director',
+  locationCity: 'Anantapur',
+  locationState: 'Andhra Pradesh',
   tagline: 'Your Journey. Our Responsibility.',
-  shortDescription: 'Reliable, comfortable and professional travel experiences — designed around your journey.',
+  shortDescription: 'Reliable, comfortable and professional travel experiences in Anantapur — designed around your journey by Mohammad Rafi.',
   whatsappNumber: import.meta.env.VITE_SMR_WHATSAPP_NUMBER || '919989599621', // Configured WhatsApp number
   contactPhone: '+91 99895 99621',
   contactPhone2: '+91 98664 34621',
   contactEmail: 'smdr.143@gmail.com',
-  address: 'SMR Car Travels Head Office, Main Road, Transport Hub',
+  address: 'SMR Car Travels Head Office, Main Road, Transport Hub, Clock Tower Area, Anantapur, Andhra Pradesh - 515001',
   googleMapsUrl: 'https://share.google/6anNfeqjn6zQp31wY',
-  googleMapsEmbedUrl: 'https://maps.google.com/maps?q=SMR+CAR+TRAVELS&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  googleMapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=SMR+CAR+TRAVELS',
-  openingHours: '24/7 Round-the-Clock Service',
+  googleMapsEmbedUrl: 'https://maps.google.com/maps?q=SMR+CAR+TRAVELS+Anantapur&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  googleMapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=SMR+CAR+TRAVELS+Anantapur+Mohammad+Rafi',
+  openingHours: '24/7 Round-the-Clock Service in Anantapur',
   socialLinks: {
     facebook: '#',
     instagram: '#',

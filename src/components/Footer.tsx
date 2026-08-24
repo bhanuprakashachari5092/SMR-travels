@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             </a>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm pt-2">
-              SMR Car Travels is your premier destination for professional chauffeur services, local taxis, airport pickups, and outstation trips.
+              <strong className="text-white font-bold">SMR Car Travels</strong> by <strong className="text-[#00D8F6] font-bold">Mohammad Rafi</strong> is Anantapur&apos;s leading 24/7 travel service for outstation taxi booking, airport transfers, corporate travel, and family trips across South India.
             </p>
 
             <div className="pt-2">
@@ -46,7 +46,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <li><a href="#hero" className="hover:text-[#00D8F6] transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-[#00D8F6] transition-colors">Services</a></li>
               <li><a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Our Fleet</a></li>
-              <li><a href="#location" className="hover:text-[#00D8F6] transition-colors">Location & Map</a></li>
+              <li><a href="#location" className="hover:text-[#00D8F6] transition-colors">Google Maps</a></li>
+              <li><a href="#faqs" className="hover:text-[#00D8F6] transition-colors">FAQs</a></li>
               <li><a href="#about" className="hover:text-[#00D8F6] transition-colors">About Us</a></li>
             </ul>
           </div>
