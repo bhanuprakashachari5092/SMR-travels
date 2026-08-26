@@ -38,46 +38,108 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
         {/* Map & Location Card Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Left Column: Interactive Embedded Google Map (7 Cols) */}
+          {/* Left Column: Interactive Location Hub & GPS Navigation Preview (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col">
-            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl shadow-blue-500/10 p-2 sm:p-3 flex-1 flex flex-col min-h-95 sm:min-h-110">
+            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl shadow-blue-500/10 p-4 sm:p-6 flex-1 flex flex-col justify-between min-h-95 sm:min-h-110">
               
-              {/* Map Container */}
-              <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-100 min-h-85">
-                <iframe
-                  title="SMR Car Travels by Mohammad Rafi Anantapur Google Map Location"
-                  src={SITE_CONFIG.googleMapsEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full min-h-85 absolute inset-0"
-                />
-
-                {/* Floating "Direct Location" pill on top of map */}
-                <div className="absolute top-4 left-4 right-4 sm:right-auto z-10 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-slate-200 text-xs font-bold text-[#0B1F3A]">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                  <span>SMR Car Travels • Anantapur Live GPS</span>
+              {/* Top Status & GPS Tag */}
+              <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                  </span>
+                  <span className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">
+                    SMR Car Travels Headquarters • Live GPS
+                  </span>
+                </div>
+                <div className="px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] font-bold text-[#1769FF]">
+                  14.681888° N, 77.600591° E
                 </div>
               </div>
 
-              {/* Bottom Quick Map Action Bar */}
-              <div className="pt-3 px-1 flex flex-wrap items-center justify-between gap-3 text-xs">
-                <span className="text-slate-500 font-medium flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#1769FF]" />
-                  <span>Anantapur Main Hub • Live GPS Navigation</span>
+              {/* Center Location Visual & City Hub Overview */}
+              <div className="my-6 space-y-5">
+                <div className="p-5 rounded-2xl bg-linear-to-br from-[#0B1F3A] to-[#122B4D] text-white space-y-3 relative overflow-hidden shadow-lg">
+                  {/* Subtle decorative grid */}
+                  <div className="absolute inset-0 bg-[radial-gradient(#1769FF_1px,transparent_1px)] bg-size-[16px_16px] opacity-20 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex items-start justify-between gap-4">
+                    <div>
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-white/10 text-[#00D8F6] text-[11px] font-bold mb-2">
+                        <MapPin className="w-3 h-3" />
+                        <span>Central Landmark Location</span>
+                      </div>
+                      <h4 className="text-lg sm:text-xl font-extrabold text-white">
+                        Main Road, Transport Hub
+                      </h4>
+                      <p className="text-xs text-slate-300 font-medium">
+                        Clock Tower Area, Anantapur, Andhra Pradesh - 515001
+                      </p>
+                    </div>
+
+                    <div className="hidden sm:flex flex-col items-center bg-white/10 px-3 py-2 rounded-xl border border-white/10 text-center shrink-0">
+                      <Clock className="w-4 h-4 text-[#00D8F6] mb-1" />
+                      <span className="text-[10px] text-slate-300 font-bold uppercase">Open 24/7</span>
+                    </div>
+                  </div>
+
+                  {/* Nearby Connectivity Benchmarks */}
+                  <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-3 border-t border-white/10 text-xs">
+                    <div className="bg-white/5 rounded-xl p-2.5 border border-white/5">
+                      <span className="text-[10px] text-slate-400 block font-medium">Clock Tower</span>
+                      <span className="text-white font-bold">200 Meters</span>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-2.5 border border-white/5">
+                      <span className="text-[10px] text-slate-400 block font-medium">Railway Station</span>
+                      <span className="text-white font-bold">1.5 KM</span>
+                    </div>
+                    <div className="col-span-2 sm:col-span-1 bg-white/5 rounded-xl p-2.5 border border-white/5">
+                      <span className="text-[10px] text-slate-400 block font-medium">NH44 Highway</span>
+                      <span className="text-white font-bold">2.8 KM (Express)</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Direct Google Maps Navigation Card */}
+                <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="space-y-0.5 text-center sm:text-left">
+                    <p className="text-xs font-extrabold text-[#0B1F3A]">
+                      Navigate with Official Google Maps App
+                    </p>
+                    <p className="text-[11px] text-slate-600 font-medium">
+                      Get real-time live traffic, turn-by-turn driving directions & landmark photos.
+                    </p>
+                  </div>
+
+                  <a
+                    href={SITE_CONFIG.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-md shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 shrink-0"
+                  >
+                    <Navigation className="w-4 h-4" />
+                    <span>Open in Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Bottom Info Bar */}
+              <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                <span className="flex items-center gap-1.5 font-medium">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Doorstep pickup available across all Anantapur areas</span>
                 </span>
 
                 <a
                   href={SITE_CONFIG.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-bold text-[#1769FF] hover:text-[#1254D4] hover:underline"
+                  className="font-bold text-[#1769FF] hover:underline inline-flex items-center gap-1"
                 >
-                  <span>Open in Google Maps App</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>View Official Business Profile</span>
+                  <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
 

@@ -22,7 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
       }
 
       // Track active section for iOS segmented switch
-      const sections = ['hero', 'services', 'fleet', 'location', 'faqs', 'about'];
+      const sections = ['hero', 'services', 'fleet', 'routes', 'location', 'faqs', 'about'];
       const scrollPos = window.scrollY + 220;
 
       for (const sectionId of sections) {
@@ -46,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     { name: 'Home', href: '#hero', id: 'hero' },
     { name: 'Services', href: '#services', id: 'services', icon: Sparkles },
     { name: 'Fleet', href: '#fleet', id: 'fleet', icon: Car },
+    { name: 'Routes', href: '#routes', id: 'routes', icon: MapPin },
     { name: 'Location', href: '#location', id: 'location', icon: MapPin },
     { name: 'FAQs', href: '#faqs', id: 'faqs', icon: HelpCircle },
     { name: 'About', href: '#about', id: 'about', icon: ShieldCheck },
@@ -74,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           }`}
         >
           {/* iOS Specular Glass Surface Refraction Line */}
-          <div className="absolute top-0 inset-x-10 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none opacity-90 rounded-full" />
+          <div className="absolute top-0 inset-x-10 h-px bg-linear-to-r from-transparent via-white to-transparent pointer-events-none opacity-90 rounded-full" />
 
           <div className="flex items-center justify-between gap-2 sm:gap-4">
             
@@ -89,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               </a>
 
               {/* iOS Style Live Dynamic Status Badge */}
-              <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.03] border border-black/[0.06] backdrop-blur-md shadow-inner text-[11px] font-bold text-slate-800">
+              <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/3 border border-black/6 backdrop-blur-md shadow-inner text-[11px] font-bold text-slate-800">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -204,7 +205,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           {/* iOS Sheet Mobile Drawer */}
           {mobileMenuOpen && (
-            <div className="md:hidden pt-4 pb-2 mt-3 border-t border-black/[0.08] space-y-4 animate-in slide-in-from-top-2 duration-300">
+            <div className="md:hidden pt-4 pb-2 mt-3 border-t border-black/8 space-y-4 animate-in slide-in-from-top-2 duration-300">
               
               {/* Mobile Navigation Links */}
               <nav className="grid grid-cols-2 gap-1.5">
@@ -230,7 +231,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               </nav>
 
               {/* Mobile Action Buttons */}
-              <div className="pt-2 border-t border-black/[0.08] flex flex-col gap-2">
+              <div className="pt-2 border-t border-black/8 flex flex-col gap-2">
                 <div className="grid grid-cols-2 gap-2">
                   <a
                     href={`tel:${SITE_CONFIG.contactPhone}`}

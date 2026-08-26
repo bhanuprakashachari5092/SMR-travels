@@ -5,7 +5,7 @@
   <!-- Homepage & Core Landing Page -->
   <url>
     <loc>https://smrcartravels.in/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -26,8 +26,20 @@
       <image:title>Swift Dzire Executive Sedan Car Travels Anantapur</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://smrcartravels.in/images/about/etios.png</image:loc>
+      <image:title>Toyota Etios Sedan Outstation Taxi Anantapur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://smrcartravels.in/images/about/toofan.png</image:loc>
+      <image:title>Force Toofan 10 Seater Multi-Utility Vehicle Anantapur</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://smrcartravels.in/images/about/traveller.png</image:loc>
       <image:title>Force Tempo Traveller 12-17 Seater Anantapur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://smrcartravels.in/images/about/minibus.png</image:loc>
+      <image:title>SMR Luxury Minibus 20+ Seater Executive Coach Anantapur</image:title>
     </image:image>
     <image:image>
       <image:loc>https://smrcartravels.in/images/smr-owner-office.jpg</image:loc>

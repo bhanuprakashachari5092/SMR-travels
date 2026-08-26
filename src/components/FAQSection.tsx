@@ -11,27 +11,35 @@ interface FAQItem {
 const FAQS: FAQItem[] = [
   {
     question: 'Who is the founder of SMR Car Travels in Anantapur?',
-    answer: 'SMR Car Travels is founded and managed by Mohammad Rafi, offering premium 24/7 car rental, outstation taxi, luxury cabs, and chauffeur services based in Anantapur, Andhra Pradesh.'
+    answer: 'SMR Car Travels is founded and managed by Mohammad Rafi, offering premium 24/7 car rental, outstation taxi, luxury cabs, and chauffeur services based in Anantapur, Andhra Pradesh (ATP Car Travels).'
+  },
+  {
+    question: 'What are the cab options & rates for Anantapur to Bangalore Airport (KIA) and Hyderabad?',
+    answer: 'We provide dedicated 24/7 one-way drops and roundtrips to Bangalore Kempegowda International Airport (KIA - 205 KM) and Hyderabad Rajiv Gandhi International Airport (RGIA - 355 KM). We offer Swift Dzire, Toyota Etios, Suzuki Ertiga (7-seater), Toyota Innova Crysta, and Tempo Travellers at transparent, competitive per-KM and fixed package rates.'
   },
   {
     question: 'What car models can I rent with SMR Car Travels Anantapur?',
-    answer: 'We provide a wide fleet of pristine, air-conditioned vehicles including Toyota Innova Crysta (7-Seater Luxury SUV), Suzuki Ertiga (7-Seater), Swift Dzire, Toyota Etios, Force Toofan (10-Seater), Force Tempo Traveller (12–17 Seater), and Luxury Minibuses (20+ Seater).'
+    answer: 'We provide a wide fleet of pristine, air-conditioned vehicles including Toyota Innova Crysta (7-Seater Luxury SUV), Suzuki Ertiga (7-Seater), Swift Dzire, Toyota Etios, Force Toofan (10-Seater), Force Tempo Traveller (12–17 Seater), and Luxury Minibuses (20+ Seater) for family, wedding, and corporate trips.'
   },
   {
-    question: 'Does SMR Car Travels provide cabs from Anantapur to Bangalore Airport and Hyderabad?',
-    answer: 'Yes! We specialize in on-time airport transfers and outstation trips from Anantapur to Bangalore Kempegowda International Airport (KIA), Bangalore City, Hyderabad (RGIA), Tirupati, Vijayawada, Kurnool, and Kadapa at fixed, transparent per-kilometer rates.'
+    question: 'Do you offer Tirupati Balaji darshan packages and temple tours from Anantapur?',
+    answer: 'Yes! We offer customized 1-day and 2-day pilgrimage packages from Anantapur to Tirupati Balaji (Tirumala), Puttaparthi (Prashanthi Nilayam), Lepakshi Heritage Temple, Mantralayam Raghavendra Swamy Mutt, and Srisailam with seasoned ghat highway chauffeurs.'
   },
   {
     question: 'How can I book a ride with Mohammad Rafi at SMR Car Travels?',
-    answer: 'Booking is simple and fast. You can call or message directly on WhatsApp at +91 99895 99621 or +91 98664 34621 for an instant 30-second confirmation with zero advance stress.'
+    answer: 'Booking is instant and simple. You can call directly or message on WhatsApp at +91 99895 99621 or +91 98664 34621 for a 30-second confirmation with zero advance booking stress.'
+  },
+  {
+    question: 'Does SMR Car Travels provide One-Way cabs without return charges?',
+    answer: 'Yes! We offer economical one-way cab drops from Anantapur to Bangalore, Hyderabad, Tirupati, Kurnool, and Kadapa where you only pay for the one-way trip distance without paying return charges.'
+  },
+  {
+    question: 'Are there any hidden costs, surge pricing, or unexpected extras?',
+    answer: 'No. SMR Car Travels practices 100% transparent pricing. All quotes clearly state per-km rates, driver allowances, and toll/parking terms so you enjoy a stress-free journey with zero surprises.'
   },
   {
     question: 'Where is SMR Car Travels located on Google Maps in Anantapur?',
-    answer: 'Our main office hub is centrally located on Main Road near the Transport Hub & Clock Tower in Anantapur, Andhra Pradesh (PIN: 515001). You can also click the Google Maps button on this page to get turn-by-turn live GPS directions.'
-  },
-  {
-    question: 'Are the drivers verified and experienced for highway long trips?',
-    answer: 'All our drivers are background-verified, uniform-clad, highly courteous, and seasoned highway experts with 10+ years of safe driving experience across South India.'
+    answer: 'Our main office hub is centrally located on Main Road near the Transport Hub & Clock Tower area in Anantapur, Andhra Pradesh (PIN: 515001). You can click the Google Maps button on this page for live GPS turn-by-turn directions.'
   }
 ];
 

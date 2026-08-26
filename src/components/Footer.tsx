@@ -46,6 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <li><a href="#hero" className="hover:text-[#00D8F6] transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-[#00D8F6] transition-colors">Services</a></li>
               <li><a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Our Fleet</a></li>
+              <li><a href="#routes" className="hover:text-[#00D8F6] transition-colors">Top Routes</a></li>
               <li><a href="#location" className="hover:text-[#00D8F6] transition-colors">Google Maps</a></li>
               <li><a href="#faqs" className="hover:text-[#00D8F6] transition-colors">FAQs</a></li>
               <li><a href="#about" className="hover:text-[#00D8F6] transition-colors">About Us</a></li>
@@ -63,6 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                   </a>
                 </li>
               ))}
+              <li><a href="#routes" className="hover:text-[#00D8F6] transition-colors">Outstation Cabs & Airport Drops</a></li>
             </ul>
           </div>
 
@@ -119,6 +121,55 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             </ul>
           </div>
 
+        </div>
+
+        {/* SEO Keyword Cloud & Local Travel Coverage Directory */}
+        <div className="py-8 border-b border-white/10 space-y-4 text-xs text-slate-400">
+          <div className="space-y-2">
+            <h5 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+              Popular Car Travel Searches in Anantapur (ATP)
+            </h5>
+            <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-[11px] text-slate-400">
+              <a href="#hero" className="hover:text-[#00D8F6] transition-colors">SMR Car Travels Mohammad Rafi</a>
+              <span>•</span>
+              <a href="#services" className="hover:text-[#00D8F6] transition-colors">Car Travels in Anantapur</a>
+              <span>•</span>
+              <a href="#location" className="hover:text-[#00D8F6] transition-colors">Anantapur Car Travels Contact Number</a>
+              <span>•</span>
+              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Bangalore Airport Cab</a>
+              <span>•</span>
+              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Hyderabad Taxi</a>
+              <span>•</span>
+              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Tirupati Balaji Car Package</a>
+              <span>•</span>
+              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Innova Crysta Rental Anantapur</a>
+              <span>•</span>
+              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Ertiga 7 Seater Cab Booking</a>
+              <span>•</span>
+              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Tempo Traveller Hire Anantapur</a>
+              <span>•</span>
+              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Swift Dzire AC Cab</a>
+              <span>•</span>
+              <a href="#services" className="hover:text-[#00D8F6] transition-colors">24/7 Taxi Service Anantapur</a>
+              <span>•</span>
+              <a href="#about" className="hover:text-[#00D8F6] transition-colors">ATP Travels Mohammad Rafi</a>
+              <span>•</span>
+              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Puttaparthi Taxi Service</a>
+              <span>•</span>
+              <a href="#services" className="hover:text-[#00D8F6] transition-colors">Marriage Luxury Car Rental</a>
+              <span>•</span>
+              <a href="#services" className="hover:text-[#00D8F6] transition-colors">One Way Outstation Cab</a>
+            </div>
+          </div>
+
+          <div className="space-y-1.5 pt-2">
+            <h5 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+              Areas & Surrounding Towns Served
+            </h5>
+            <p className="text-[11px] text-slate-400 leading-relaxed">
+              Anantapur Clock Tower Area, Ram Nagar, Rudrampeta, Collectorate, JNTU Anantapur, Dharmavaram, Guntakal, Tadipatri, Hindupur, Kadiri, Puttaparthi, Rayadurg, Kalyandurg, Gooty, Kurnool, Kadapa, Bangalore, Hyderabad, Tirupati, and all major cities across Andhra Pradesh & Karnataka.
+            </p>
+          </div>
         </div>
 
         {/* Bottom Bar & Copyright */}

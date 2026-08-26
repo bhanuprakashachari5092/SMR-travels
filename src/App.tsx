@@ -7,6 +7,7 @@ import { VideoSection } from './components/VideoSection';
 import { FounderSection } from './components/FounderSection';
 import { Services } from './components/Services';
 import { Fleet } from './components/Fleet';
+import { PopularRoutes } from './components/PopularRoutes';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { BookingProcess } from './components/BookingProcess';
 import { Stats } from './components/Stats';
@@ -70,6 +71,9 @@ export function App() {
 
         {/* Luxury Vehicle Fleet Showcase */}
         <Fleet onSelectCar={(carName) => handleOpenBooking(carName)} />
+
+        {/* 🛣️ Top Outstation & Airport Travel Routes (High-Intent SEO Hub) */}
+        <PopularRoutes onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
         {/* Why Choose SMR Section */}
         <WhyChooseUs />

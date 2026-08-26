@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             {/* Small Premium Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200 text-xs font-bold tracking-wider text-[#1769FF] uppercase shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#1769FF] animate-pulse" />
-              <span>PREMIUM TRAVEL EXPERIENCE</span>
+              <span>TOP-RATED CAR RENTAL & TAXI • ANANTAPUR</span>
             </div>
 
             {/* Main Heading */}
@@ -66,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
             {/* Supporting Subtext */}
             <p className="text-base sm:text-lg text-slate-600 max-w-xl font-medium leading-relaxed">
-              Reliable, comfortable and professional travel experiences designed around you.
+              24/7 Car Rental & Taxi Service in Anantapur by <strong className="text-[#0B1F3A] font-bold">Mohammad Rafi</strong>. Innova Crysta, Ertiga, Swift Dzire & Tempo Travellers for Bangalore Airport, Hyderabad, Tirupati and outstation trips.
             </p>
 
             {/* Hero Feature Highlights */}

@@ -14,9 +14,7 @@ export const SITE_CONFIG = {
   contactPhone2: '+91 98664 34621',
   contactEmail: 'smdr.143@gmail.com',
   address: 'SMR Car Travels Head Office, Main Road, Transport Hub, Clock Tower Area, Anantapur, Andhra Pradesh - 515001',
-  googleMapsUrl: 'https://share.google/6anNfeqjn6zQp31wY',
-  googleMapsEmbedUrl: 'https://maps.google.com/maps?q=SMR+CAR+TRAVELS+Anantapur&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  googleMapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=SMR+CAR+TRAVELS+Anantapur+Mohammad+Rafi',
+  googleMapsUrl: 'https://maps.app.goo.gl/khehmpcRccDpwJSB6',
   openingHours: '24/7 Round-the-Clock Service in Anantapur',
   socialLinks: {
     facebook: '#',
