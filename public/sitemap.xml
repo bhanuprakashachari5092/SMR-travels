@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   
   <!-- Homepage & Core Landing Page -->
   <url>
@@ -47,6 +48,19 @@
       <image:caption>Mohammad Rafi, Founder of SMR Car Travels Anantapur (ATP Travels). Top-rated 24/7 Anantapur car travels and taxi service.</image:caption>
       <image:geo_location>Anantapur, Andhra Pradesh, India</image:geo_location>
     </image:image>
+
+    <!-- Google Video Search Indexation -->
+    <video:video>
+      <video:thumbnail_loc>https://smrcartravels.in/images/innova-hero.png</video:thumbnail_loc>
+      <video:title>SMR Car Travels Fleet &amp; Taxi Service Showcase Anantapur - Mohammad Rafi</video:title>
+      <video:description>Watch SMR Car Travels fleet in action in Anantapur. Top-rated 24/7 car rental, Toyota Innova Crysta, Suzuki Ertiga, Swift Dzire, Tempo Traveller for outstation taxi trips and Bangalore Airport cab transfers by Mohammad Rafi.</video:description>
+      <video:content_loc>https://smrcartravels.in/SMR%20travels.mp4</video:content_loc>
+      <video:player_loc>https://smrcartravels.in/#video</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-08-26T00:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://smrcartravels.in/">Mohammad Rafi - SMR Car Travels</video:uploader>
+    </video:video>
   </url>
 
 </urlset>

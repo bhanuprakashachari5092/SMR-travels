@@ -26,7 +26,7 @@ export const VideoSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-12 md:py-20 bg-linear-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
+    <section id="video" className="relative py-12 md:py-20 bg-linear-to-b from-[#EEF6FF] via-white to-[#F8FAFC] overflow-hidden border-b border-slate-200/80">
       {/* Soft Cyan Ambient Glow Highlights */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-linear-to-tr from-[#1769FF]/15 via-[#00B8D9]/15 to-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -41,6 +41,8 @@ export const VideoSection: React.FC = () => {
                 <video
                   ref={videoRef}
                   src="/SMR travels.mp4"
+                  title="SMR Car Travels Fleet & Luxury Taxi Service Showcase in Anantapur by Mohammad Rafi"
+                  aria-label="SMR Car Travels Fleet Showcase Video"
                   preload="metadata"
                   loop
                   muted
