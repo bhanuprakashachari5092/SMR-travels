@@ -87,8 +87,13 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
           </div>
         </div>
 
-        {/* Form Grid */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Form Grid with WebMCP Agentic Annotations */}
+        <form 
+          onSubmit={handleSubmit} 
+          data-webmcp-tool="submitBooking"
+          data-webmcp-description="Submit passenger taxi reservation details to SMR Car Travels Anantapur"
+          className="space-y-4"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             {/* Full Name */}
@@ -103,6 +108,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 type="text"
                 autoComplete="name"
                 inputMode="text"
+                data-webmcp-param="fullName"
                 required
                 placeholder="e.g. Rahul Sharma"
                 value={formData.fullName}
@@ -123,6 +129,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 type="tel"
                 autoComplete="tel"
                 inputMode="tel"
+                data-webmcp-param="mobileNumber"
                 required
                 placeholder="e.g. +91 98765 43210"
                 value={formData.mobile}
@@ -142,6 +149,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 name="pickupLocation"
                 type="text"
                 autoComplete="address-level2"
+                data-webmcp-param="pickupLocation"
                 required
                 placeholder="City, Landmark or Address"
                 value={formData.pickupLocation}
@@ -161,6 +169,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                 name="dropLocation"
                 type="text"
                 autoComplete="address-level2"
+                data-webmcp-param="dropLocation"
                 required
                 placeholder="Destination City or Airport"
                 value={formData.dropLocation}

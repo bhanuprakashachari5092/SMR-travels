@@ -1,0 +1,45 @@
+# SMR Car Travels - Complete Knowledge & Agent Directory
+
+> Premier 24/7 Car Rental, Taxi Service & Outstation Chauffeur Cabs in Anantapur (ATP Travels) managed by Founder Mohammad Rafi.
+
+## Business Profile
+- **Company Name**: SMR Car Travels by Mohammad Rafi
+- **Founder & MD**: Mohammad Rafi
+- **Location**: Head Office, Main Road, Transport Hub, Clock Tower Area, Anantapur, Andhra Pradesh - 515001, India
+- **Primary Hotline**: +91 99895 99621
+- **Secondary Hotline**: +91 98664 34621
+- **WhatsApp Support**: https://wa.me/919989599621
+- **Official Website**: https://smrcartravels.in/
+- **Google Maps Location**: https://maps.app.goo.gl/khehmpcRccDpwJSB6
+- **Availability**: 24 Hours / 7 Days a Week
+
+## Vehicle Fleet Details
+| Vehicle Name | Category | Seating Capacity | Luggage Capacity | Air Conditioning | Best For |
+|---|---|---|---|---|---|
+| Toyota Innova Crysta | Luxury SUV | 7 Passengers | 4 Large Suitcases | Dual AC | Outstation, Bangalore Airport, VIP & Family Travel |
+| Suzuki Ertiga | Premium MPV | 7 Passengers | 3 Large Suitcases | Dual AC | Family Outstation & City Tours |
+| Swift Dzire | Executive Sedan | 4 Passengers | 2 Large Bags | Dual AC | Airport Transfers & City Commute |
+| Toyota Etios | Spacious Sedan | 4 Passengers | 3 Large Bags | Dual AC | Highway Travel & Long Outstation Trips |
+| Force Toofan | Multi-Utility Vehicle | 10+ Passengers | 4 Large Bags | AC Available | Large Groups, Village & Pilgrimage Tours |
+| Force Tempo Traveller | Luxury Coach | 12-17 Passengers | 6+ Large Bags | High-Roof AC | Group Tours, Corporate Outings & Pilgrimages |
+| SMR Luxury Minibus | Executive Minibus | 20-26 Passengers | 10+ Large Bags | Full AC & PA System | Weddings, Delegations & Multi-Day Tour Packages |
+
+## Top Outstation Routes & Travel Times
+- **Anantapur ⇄ Bangalore Kempegowda International Airport (KIA)**: 205 KM (~3.5 Hours via NH44)
+- **Anantapur ⇄ Bangalore City (Majestic, Whitefield, Electronic City)**: 215 KM (~4 Hours)
+- **Anantapur ⇄ Hyderabad (RGIA, Gachibowli, Hitec City)**: 355 KM (~5.5 Hours via NH44)
+- **Anantapur ⇄ Tirupati Balaji Temple (Tirumala)**: 290 KM (~5.5 Hours)
+- **Anantapur ⇄ Puttaparthi (Prashanthi Nilayam)**: 85 KM (~1.5 Hours)
+- **Anantapur ⇄ Kurnool & Mantralayam**: 150 KM (~2.5 Hours)
+- **Anantapur ⇄ Lepakshi Heritage Temple**: 120 KM (~2 Hours)
+- **Anantapur ⇄ Kadapa & Proddatur**: 145 KM (~2.5 Hours)
+
+## Services Offered
+1. **One-Way Outstation Drops**: Pay only for one-way distance without return toll or vehicle charges.
+2. **Round-Trip Outstation Tours**: Keep the vehicle and chauffeur for multi-day itineraries.
+3. **Bangalore & Hyderabad Airport Transfers**: 24/7 flight-synchronized pickup and drops with zero waiting penalties.
+4. **Local Hourly Rentals**: Half-day (4 Hrs / 40 KM) and Full-day (8 Hrs / 80 KM) packages.
+5. **Corporate & Wedding Fleet**: Luxury car convoys for VIP delegates and wedding guests.
+
+## How AI Agents Can Book Rides
+AI Agents can interact with the website via WebMCP annotations on the booking forms at `https://smrcartravels.in/#booking` or dispatch a formatted reservation message directly to WhatsApp `+91 99895 99621`.

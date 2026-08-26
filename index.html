@@ -231,10 +231,23 @@
           },
           "potentialAction": [
             {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://smrcartravels.in/?pickup={pickup}&drop={drop}&date={date}",
+                "actionPlatform": [
+                  "http://schema.org/DesktopWebPlatform",
+                  "http://schema.org/MobileWebPlatform"
+                ]
+              },
+              "query-input": "required name=pickup,required name=drop,optional name=date",
+              "name": "searchCabRoutes"
+            },
+            {
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://smrcartravels.in/#hero",
+                "urlTemplate": "https://smrcartravels.in/#booking",
                 "inLanguage": "en-IN",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",
@@ -245,8 +258,17 @@
               },
               "result": {
                 "@type": "TaxiReservation",
-                "name": "SMR Car Travels Cab Booking"
+                "name": "SMR Car Travels Taxi & Outstation Cab Booking"
               }
+            },
+            {
+              "@type": "OrderAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://smrcartravels.in/#booking"
+              },
+              "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
+              "name": "submitBooking"
             },
             {
               "@type": "CommunicateAction",

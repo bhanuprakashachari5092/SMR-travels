@@ -2,5 +2,26 @@
 User-agent: *
 Allow: /
 
-# Direct Sitemap Reference
+# AI Crawlers & LLM Agent Access (Google Gemini, OpenAI, Claude, Perplexity)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap & LLM Knowledge References
 Sitemap: https://smrcartravels.in/sitemap.xml
+# LLMs.txt Reference for Agentic Browsing
+# https://smrcartravels.in/llms.txt

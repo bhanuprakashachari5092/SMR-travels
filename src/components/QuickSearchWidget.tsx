@@ -134,8 +134,15 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
           </div>
         </div>
 
-        {/* Booking Search Form Grid */}
-        <form onSubmit={handleSearchSubmit} role="search" aria-label="Quick Ride Booking Search" className="pt-6">
+        {/* Booking Search Form Grid with WebMCP Agentic Annotations */}
+        <form 
+          onSubmit={handleSearchSubmit} 
+          role="search" 
+          aria-label="Quick Ride Booking Search" 
+          data-webmcp-tool="searchRides"
+          data-webmcp-description="Search car rental availability and estimated fares from Anantapur"
+          className="pt-6"
+        >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             
             {/* HTML5 datalist for instant city suggestions while allowing manual typing */}
@@ -159,6 +166,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   name="pickupCity"
                   type="text"
                   autoComplete="address-level2"
+                  data-webmcp-param="pickupCity"
                   list="popular-cities-list"
                   value={pickupCity}
                   onChange={(e) => setPickupCity(e.target.value)}
@@ -197,6 +205,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   name="dropCity"
                   type="text"
                   autoComplete="address-level2"
+                  data-webmcp-param="dropCity"
                   list="popular-cities-list"
                   value={dropCity}
                   onChange={(e) => setDropCity(e.target.value)}
@@ -219,7 +228,9 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                 </div>
                 <input
                   id="quick-pickup-date"
+                  name="pickupDate"
                   type="date"
+                  data-webmcp-param="pickupDate"
                   value={pickupDate}
                   min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setPickupDate(e.target.value)}
