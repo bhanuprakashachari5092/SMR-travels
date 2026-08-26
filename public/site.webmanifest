@@ -1,0 +1,23 @@
+{
+  "name": "SMR Car Travels by Mohammad Rafi",
+  "short_name": "SMR Travels",
+  "description": "24/7 Car Rental & Taxi Service in Anantapur by Mohammad Rafi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#1769FF",
+  "icons": [
+    {
+      "src": "/images/smr-logo-transparent.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/smr-logo-transparent.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
