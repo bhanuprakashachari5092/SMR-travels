@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
           {/* Quick Links (2 Cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#hero" className="hover:text-[#00D8F6] transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-[#00D8F6] transition-colors">Services</a></li>
@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
           {/* Services (3 Cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">Services</h3>
             <ul className="space-y-2 text-sm">
               {SERVICES.map((srv) => (
                 <li key={srv.id}>
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
           {/* Contact Details (3 Cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#1769FF] shrink-0 mt-0.5" />
@@ -126,9 +126,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         {/* SEO Keyword Cloud & Local Travel Coverage Directory */}
         <div className="py-8 border-b border-white/10 space-y-4 text-xs text-slate-400">
           <div className="space-y-2">
-            <h5 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+            <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
               Popular Car Travel Searches in Anantapur (ATP)
-            </h5>
+            </h3>
             <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-[11px] text-slate-400">
               <a href="#hero" className="hover:text-[#00D8F6] transition-colors">SMR Car Travels Mohammad Rafi</a>
               <span>•</span>
@@ -163,9 +163,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           </div>
 
           <div className="space-y-1.5 pt-2">
-            <h5 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+            <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
               Areas & Surrounding Towns Served
-            </h5>
+            </h3>
             <p className="text-[11px] text-slate-400 leading-relaxed">
               Anantapur Clock Tower Area, Ram Nagar, Rudrampeta, Collectorate, JNTU Anantapur, Dharmavaram, Guntakal, Tadipatri, Hindupur, Kadiri, Puttaparthi, Rayadurg, Kalyandurg, Gooty, Kurnool, Kadapa, Bangalore, Hyderabad, Tirupati, and all major cities across Andhra Pradesh & Karnataka.
             </p>

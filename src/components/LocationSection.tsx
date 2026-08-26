@@ -70,9 +70,9 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                         <MapPin className="w-3 h-3" />
                         <span>Central Landmark Location</span>
                       </div>
-                      <h4 className="text-lg sm:text-xl font-extrabold text-white">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-white">
                         Main Road, Transport Hub
-                      </h4>
+                      </h3>
                       <p className="text-xs text-slate-300 font-medium">
                         Clock Tower Area, Anantapur, Andhra Pradesh - 515001
                       </p>
@@ -184,7 +184,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Office Location (Anantapur)</h4>
+                    <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Office Location (Anantapur)</h3>
                     <p className="text-xs text-slate-600 font-medium leading-relaxed">
                       {SITE_CONFIG.address}
                     </p>
@@ -197,7 +197,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <Clock className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Service Coverage</h4>
+                    <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Service Coverage</h3>
                     <p className="text-xs text-slate-600 font-medium">
                       24/7 Cab Booking in Anantapur & All Outstation Corridors
                     </p>
@@ -210,7 +210,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenBooking 
                     <PhoneCall className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Direct Hotline</h4>
+                    <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Direct Hotline</h3>
                     <div className="flex flex-wrap gap-2 text-xs font-bold text-[#0B1F3A]">
                       <a href={`tel:${SITE_CONFIG.contactPhone}`} className="hover:text-[#1769FF] transition-colors">
                         {SITE_CONFIG.contactPhone}

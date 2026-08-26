@@ -156,7 +156,9 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                 </div>
                 <input
                   id="quick-pickup-city"
+                  name="pickupCity"
                   type="text"
+                  autoComplete="address-level2"
                   list="popular-cities-list"
                   value={pickupCity}
                   onChange={(e) => setPickupCity(e.target.value)}
@@ -175,7 +177,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                 onClick={handleSwap}
                 title="Swap Pickup & Drop Locations"
                 aria-label="Swap Pickup and Drop Locations"
-                className="p-3 rounded-full bg-slate-100 hover:bg-blue-50 text-[#1769FF] hover:scale-110 border border-slate-200 transition-all duration-300 shadow-xs"
+                className="p-3 rounded-full bg-slate-100 hover:bg-blue-50 text-[#1769FF] hover:scale-110 border border-slate-200 transition-all duration-300 shadow-xs cursor-pointer"
               >
                 <ArrowRightLeft className="w-4 h-4" />
               </button>
@@ -192,7 +194,9 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                 </div>
                 <input
                   id="quick-drop-city"
+                  name="dropCity"
                   type="text"
+                  autoComplete="address-level2"
                   list="popular-cities-list"
                   value={dropCity}
                   onChange={(e) => setDropCity(e.target.value)}

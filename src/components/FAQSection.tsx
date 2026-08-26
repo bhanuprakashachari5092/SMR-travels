@@ -127,7 +127,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenBooking }) => {
         {/* Quick Bottom Support Bar */}
         <div className="mt-10 p-6 rounded-3xl bg-linear-to-r from-[#0B1F3A] to-[#122B4D] text-white flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="text-base font-extrabold">Have more questions about your Anantapur trip?</h4>
+            <h3 className="text-base font-extrabold">Have more questions about your Anantapur trip?</h3>
             <p className="text-xs text-slate-300">Talk directly to Mohammad Rafi or book in 30 seconds on WhatsApp.</p>
           </div>
 

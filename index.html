@@ -86,11 +86,11 @@
             "SMR Travels"
           ],
           "url": "https://smrcartravels.in/",
-          "logo": "https://smrcartravels.in/images/smr-logo-transparent.png",
+          "logo": "https://smrcartravels.in/images/smr-logo-transparent.webp",
           "image": [
-            "https://smrcartravels.in/images/smr-owner-office.jpg",
-            "https://smrcartravels.in/images/innova-hero.png",
-            "https://smrcartravels.in/images/smr-logo-transparent.png"
+            "https://smrcartravels.in/images/smr-owner-office.webp",
+            "https://smrcartravels.in/images/innova-hero.webp",
+            "https://smrcartravels.in/images/smr-logo-transparent.webp"
           ],
           "description": "SMR Car Travels founded by Mohammad Rafi is Anantapur's premier 24/7 car rental, outstation taxi, airport transfer, and luxury travel service provider (ATP Car Travels).",
           "founder": {
@@ -102,8 +102,8 @@
             "image": {
               "@type": "ImageObject",
               "@id": "https://smrcartravels.in/#founder-image",
-              "url": "https://smrcartravels.in/images/smr-owner-office.jpg",
-              "contentUrl": "https://smrcartravels.in/images/smr-owner-office.jpg",
+              "url": "https://smrcartravels.in/images/smr-owner-office.webp",
+              "contentUrl": "https://smrcartravels.in/images/smr-owner-office.webp",
               "caption": "Mohammad Rafi - Founder & Managing Director of SMR Car Travels Anantapur (ATP Travels)",
               "description": "Mohammad Rafi, Founder of SMR Car Travels Anantapur. Best Anantapur car travels and ATP taxi service.",
               "name": "Mohammad Rafi - SMR Car Travels Anantapur"
@@ -228,7 +228,32 @@
             "reviewCount": "1250",
             "bestRating": "5",
             "worstRating": "1"
-          }
+          },
+          "potentialAction": [
+            {
+              "@type": "ReserveAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://smrcartravels.in/#hero",
+                "inLanguage": "en-IN",
+                "actionPlatform": [
+                  "http://schema.org/DesktopWebPlatform",
+                  "http://schema.org/MobileWebPlatform",
+                  "http://schema.org/IOSPlatform",
+                  "http://schema.org/AndroidPlatform"
+                ]
+              },
+              "result": {
+                "@type": "TaxiReservation",
+                "name": "SMR Car Travels Cab Booking"
+              }
+            },
+            {
+              "@type": "CommunicateAction",
+              "name": "WhatsApp Instant Confirmation",
+              "target": "https://wa.me/919989599621"
+            }
+          ]
         },
         {
           "@type": "FAQPage",

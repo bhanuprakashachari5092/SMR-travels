@@ -47,7 +47,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
                       <UserCheck className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">Mohammad Rafi</h4>
+                      <p className="text-xs font-extrabold text-[#0B1F3A] uppercase tracking-wider">Mohammad Rafi</p>
                       <p className="text-xs font-semibold text-slate-600">Founder & Managing Director • Anantapur (ATP)</p>
                     </div>
                   </div>

@@ -166,10 +166,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {/* Call Icon Button */}
               <a
                 href={`tel:${SITE_CONFIG.contactPhone}`}
-                className="p-2 rounded-full ios-glass-button text-[#1769FF] active:scale-90 transition-transform"
+                className="w-10 h-10 rounded-full ios-glass-button text-[#1769FF] active:scale-90 transition-transform flex items-center justify-center"
                 aria-label="Call SMR Travels"
               >
-                <Phone className="w-3.5 h-3.5" />
+                <Phone className="w-4 h-4" />
               </a>
 
               {/* WhatsApp Icon Button */}
@@ -177,17 +177,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-emerald-600 text-white shadow-xs active:scale-90 transition-transform"
+                className="w-10 h-10 rounded-full bg-emerald-600 text-white shadow-xs active:scale-90 transition-transform flex items-center justify-center"
                 aria-label="WhatsApp SMR Travels"
               >
-                <WhatsAppIcon className="w-3.5 h-3.5" />
+                <WhatsAppIcon className="w-4 h-4" />
               </a>
 
               {/* Book Ride Button */}
               <button
                 onClick={() => onOpenBooking && onOpenBooking()}
                 aria-label="Book your ride online"
-                className="px-3.5 py-1.5 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-90 transition-transform cursor-pointer"
+                className="h-10 px-4 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-90 transition-transform cursor-pointer flex items-center justify-center"
               >
                 Book
               </button>
@@ -195,10 +195,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {/* Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-full ios-glass-button text-[#0B1F3A] active:scale-90 transition-transform focus:outline-none cursor-pointer"
+                className="w-10 h-10 rounded-full ios-glass-button text-[#0B1F3A] active:scale-90 transition-transform focus:outline-none cursor-pointer flex items-center justify-center"
                 aria-label="Toggle Navigation Menu"
               >
-                {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+                {mobileMenuOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
               </button>
             </div>
 

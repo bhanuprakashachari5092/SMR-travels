@@ -99,7 +99,10 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               </label>
               <input
                 id="modal-full-name"
+                name="fullName"
                 type="text"
+                autoComplete="name"
+                inputMode="text"
                 required
                 placeholder="e.g. Rahul Sharma"
                 value={formData.fullName}
@@ -116,7 +119,10 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               </label>
               <input
                 id="modal-mobile-number"
+                name="mobile"
                 type="tel"
+                autoComplete="tel"
+                inputMode="tel"
                 required
                 placeholder="e.g. +91 98765 43210"
                 value={formData.mobile}
@@ -133,7 +139,9 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               </label>
               <input
                 id="modal-pickup-location"
+                name="pickupLocation"
                 type="text"
+                autoComplete="address-level2"
                 required
                 placeholder="City, Landmark or Address"
                 value={formData.pickupLocation}
@@ -150,7 +158,9 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               </label>
               <input
                 id="modal-drop-location"
+                name="dropLocation"
                 type="text"
+                autoComplete="address-level2"
                 required
                 placeholder="Destination City or Airport"
                 value={formData.dropLocation}

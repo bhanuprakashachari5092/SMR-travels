@@ -328,9 +328,9 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onOpenBooking }) =
               <Sparkles className="w-3 h-3" />
               <span>CUSTOM OUTSTATION & TOUR ITINERARIES</span>
             </div>
-            <h4 className="text-xl sm:text-2xl font-extrabold text-white">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-white">
               Need a cab to Goa, Chennai, Vijayawada, or customized multi-day trip?
-            </h4>
+            </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-2xl font-medium">
               Mohammad Rafi coordinates personalized one-way drops, wedding convoy bookings, corporate multi-car fleet, and all-South India tourist packages with 24/7 dedicated support.
             </p>
