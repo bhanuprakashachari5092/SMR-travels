@@ -141,8 +141,8 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onOpenBooking }) =
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold tracking-wider text-[#1769FF] uppercase shadow-2xs">
-            <Navigation className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-xs font-black tracking-wider text-blue-950 uppercase shadow-2xs">
+            <Navigation className="w-3.5 h-3.5 text-[#1769FF]" />
             <span>TOP OUTSTATION CAB ROUTES FROM ANANTAPUR</span>
           </div>
 
@@ -289,7 +289,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onOpenBooking }) =
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Book ${route.to} on WhatsApp`}
-                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all"
+                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs shadow-md transition-all"
                   >
                     <WhatsAppIcon className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>

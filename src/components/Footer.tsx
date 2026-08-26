@@ -73,32 +73,33 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#1769FF] shrink-0 mt-0.5" />
-                <div className="flex flex-col space-y-0.5">
-                  <a href={`tel:${SITE_CONFIG.contactPhone}`} className="hover:text-white transition-colors">
+                <Phone className="w-4 h-4 text-[#1769FF] shrink-0 mt-1" />
+                <div className="flex flex-col space-y-1">
+                  <a href={`tel:${SITE_CONFIG.contactPhone}`} aria-label="Call primary phone +91 99895 99621" className="hover:text-white transition-colors py-1 inline-block">
                     {SITE_CONFIG.contactPhone}
                   </a>
-                  <a href={`tel:${SITE_CONFIG.contactPhone2}`} className="hover:text-white transition-colors">
+                  <a href={`tel:${SITE_CONFIG.contactPhone2}`} aria-label="Call secondary phone +91 98664 34621" className="hover:text-white transition-colors py-1 inline-block">
                     {SITE_CONFIG.contactPhone2}
                   </a>
                 </div>
               </li>
 
               <li className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#00B8D9] shrink-0 mt-0.5" />
-                <a href={`mailto:${SITE_CONFIG.contactEmail}`} className="hover:text-white transition-colors">
+                <Mail className="w-4 h-4 text-[#00B8D9] shrink-0 mt-1" />
+                <a href={`mailto:${SITE_CONFIG.contactEmail}`} aria-label="Send email to SMR Travels" className="hover:text-white transition-colors py-1 inline-block">
                   {SITE_CONFIG.contactEmail}
                 </a>
               </li>
 
               <li className="flex items-start gap-2.5 group">
-                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                 <div className="flex flex-col space-y-1">
                   <a
                     href={SITE_CONFIG.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs leading-relaxed text-slate-300 hover:text-[#00D8F6] transition-colors flex items-center gap-1.5"
+                    aria-label="SMR Car Travels Address on Google Maps"
+                    className="text-xs leading-relaxed text-slate-300 hover:text-[#00D8F6] transition-colors flex items-center gap-1.5 py-1"
                   >
                     <span>{SITE_CONFIG.address}</span>
                   </a>
@@ -106,7 +107,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                     href={SITE_CONFIG.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#00D8F6] hover:underline"
+                    aria-label="Open SMR Car Travels official Google Maps profile"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#00D8F6] hover:underline py-1"
                   >
                     <span>View on Google Maps</span>
                     <span className="text-[10px]">↗</span>
@@ -116,7 +118,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
               <li className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#C9A227] shrink-0 mt-0.5" />
-                <span className="text-xs">{SITE_CONFIG.openingHours}</span>
+                <span className="text-xs py-1">{SITE_CONFIG.openingHours}</span>
               </li>
             </ul>
           </div>
@@ -129,36 +131,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
               Popular Car Travel Searches in Anantapur (ATP)
             </h3>
-            <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-[11px] text-slate-400">
-              <a href="#hero" className="hover:text-[#00D8F6] transition-colors">SMR Car Travels Mohammad Rafi</a>
-              <span>•</span>
-              <a href="#services" className="hover:text-[#00D8F6] transition-colors">Car Travels in Anantapur</a>
-              <span>•</span>
-              <a href="#location" className="hover:text-[#00D8F6] transition-colors">Anantapur Car Travels Contact Number</a>
-              <span>•</span>
-              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Bangalore Airport Cab</a>
-              <span>•</span>
-              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Hyderabad Taxi</a>
-              <span>•</span>
-              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Anantapur to Tirupati Balaji Car Package</a>
-              <span>•</span>
-              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Innova Crysta Rental Anantapur</a>
-              <span>•</span>
-              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Ertiga 7 Seater Cab Booking</a>
-              <span>•</span>
-              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Tempo Traveller Hire Anantapur</a>
-              <span>•</span>
-              <a href="#fleet" className="hover:text-[#00D8F6] transition-colors">Swift Dzire AC Cab</a>
-              <span>•</span>
-              <a href="#services" className="hover:text-[#00D8F6] transition-colors">24/7 Taxi Service Anantapur</a>
-              <span>•</span>
-              <a href="#about" className="hover:text-[#00D8F6] transition-colors">ATP Travels Mohammad Rafi</a>
-              <span>•</span>
-              <a href="#routes" className="hover:text-[#00D8F6] transition-colors">Puttaparthi Taxi Service</a>
-              <span>•</span>
-              <a href="#services" className="hover:text-[#00D8F6] transition-colors">Marriage Luxury Car Rental</a>
-              <span>•</span>
-              <a href="#services" className="hover:text-[#00D8F6] transition-colors">One Way Outstation Cab</a>
+            <div className="flex flex-wrap gap-2 text-[11px]">
+              <a href="#hero" aria-label="Search SMR Car Travels Mohammad Rafi" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">SMR Car Travels Mohammad Rafi</a>
+              <a href="#services" aria-label="Search Car Travels in Anantapur" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Car Travels in Anantapur</a>
+              <a href="#location" aria-label="Search Anantapur Car Travels Contact Number" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Anantapur Car Travels Contact Number</a>
+              <a href="#routes" aria-label="Search Anantapur to Bangalore Airport Cab" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Anantapur to Bangalore Airport Cab</a>
+              <a href="#routes" aria-label="Search Anantapur to Hyderabad Taxi" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Anantapur to Hyderabad Taxi</a>
+              <a href="#routes" aria-label="Search Anantapur to Tirupati Balaji Car Package" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Anantapur to Tirupati Balaji Car Package</a>
+              <a href="#fleet" aria-label="Search Innova Crysta Rental Anantapur" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Innova Crysta Rental Anantapur</a>
+              <a href="#fleet" aria-label="Search Ertiga 7 Seater Cab Booking" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Ertiga 7 Seater Cab Booking</a>
+              <a href="#fleet" aria-label="Search Tempo Traveller Hire Anantapur" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Tempo Traveller Hire Anantapur</a>
+              <a href="#fleet" aria-label="Search Swift Dzire AC Cab" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Swift Dzire AC Cab</a>
+              <a href="#services" aria-label="Search 24/7 Taxi Service Anantapur" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">24/7 Taxi Service Anantapur</a>
+              <a href="#about" aria-label="Search ATP Travels Mohammad Rafi" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">ATP Travels Mohammad Rafi</a>
+              <a href="#routes" aria-label="Search Puttaparthi Taxi Service" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Puttaparthi Taxi Service</a>
+              <a href="#services" aria-label="Search Marriage Luxury Car Rental" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">Marriage Luxury Car Rental</a>
+              <a href="#services" aria-label="Search One Way Outstation Cab" className="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#00D8F6] transition-colors">One Way Outstation Cab</a>
             </div>
           </div>
 

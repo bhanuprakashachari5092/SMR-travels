@@ -40,10 +40,10 @@ export const VideoSection: React.FC = () => {
                 {/* Autoplay Muted Loop Video with Performance Intersection & Preload */}
                 <video
                   ref={videoRef}
-                  src="/SMR travels.mp4"
+                  src="/smr-travels-showcase.mp4"
                   title="SMR Car Travels Fleet & Luxury Taxi Service Showcase in Anantapur by Mohammad Rafi"
                   aria-label="SMR Car Travels Fleet Showcase Video"
-                  preload="metadata"
+                  preload="none"
                   loop
                   muted
                   playsInline
@@ -53,7 +53,8 @@ export const VideoSection: React.FC = () => {
                   onContextMenu={(e) => e.preventDefault()}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 brightness-95 pointer-events-none select-none"
                 >
-                  <track kind="captions" src="data:text/vtt,WEBVTT" srcLang="en" label="English" default />
+                  <source src="/smr-travels-showcase.mp4" type="video/mp4" />
+                  <track kind="captions" src="data:text/vtt,WEBVTT%0A%0A1%0A00:00:00.000%20-->%2000:00:30.000%0AWelcome%20to%20SMR%20Car%20Travels" srcLang="en" label="English" default />
                 </video>
               </div>
 

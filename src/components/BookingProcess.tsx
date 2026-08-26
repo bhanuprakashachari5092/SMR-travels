@@ -33,7 +33,7 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold text-[#1769FF] uppercase tracking-widest shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-xs font-black text-blue-950 uppercase tracking-widest shadow-xs">
             <span>EASY 3-STEP PROCESS</span>
           </div>
 

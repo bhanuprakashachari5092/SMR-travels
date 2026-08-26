@@ -76,14 +76,15 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
 
               {/* Top Vehicle Label Badge & Quick Book Action */}
               <div className="relative z-10 flex items-center justify-between">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-blue-100 text-xs font-extrabold text-[#1769FF] shadow-xs">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-black text-blue-950 shadow-xs">
                   <span className="w-2 h-2 rounded-full bg-[#1769FF] animate-pulse" />
                   <span>{SLIDE_VEHICLES[currentSlide].name}</span>
                 </div>
                 {onOpenBooking && (
                   <button
                     onClick={() => onOpenBooking(SLIDE_VEHICLES[currentSlide].name)}
-                    className="text-[11px] font-bold text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:opacity-90 px-3 py-1 rounded-lg shadow-sm transition-all flex items-center gap-1 transform hover:scale-105"
+                    aria-label={`Book ${SLIDE_VEHICLES[currentSlide].name}`}
+                    className="text-[11px] font-bold text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] hover:opacity-90 px-3 py-1.5 rounded-lg shadow-sm transition-all flex items-center gap-1 transform hover:scale-105 cursor-pointer"
                   >
                     <span>Book {SLIDE_VEHICLES[currentSlide].name.split(' ')[0]}</span>
                     <ArrowRight className="w-3 h-3" />
@@ -92,7 +93,12 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
               </div>
 
               {/* Main Sliding Image Display */}
-              <div className="relative z-10 my-auto py-3 flex items-center justify-center h-65 sm:h-77.5 overflow-hidden">
+              <div 
+                id={`vehicle-panel-${currentSlide}`}
+                role="tabpanel"
+                aria-labelledby={`vehicle-tab-${currentSlide}`}
+                className="relative z-10 my-auto py-3 flex items-center justify-center h-65 sm:h-77.5 overflow-hidden"
+              >
                 <img
                   key={SLIDE_VEHICLES[currentSlide].image}
                   src={SLIDE_VEHICLES[currentSlide].image}
@@ -108,7 +114,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
               {/* Manual Left/Right Navigation Arrows */}
               <button
                 onClick={handlePrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer flex items-center justify-center"
                 aria-label="Previous vehicle slide"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -116,25 +122,34 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
 
               <button
                 onClick={handleNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer flex items-center justify-center"
                 aria-label="Next vehicle slide"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
 
-              {/* Bottom Dot Nav Indicators */}
-              <div className="relative z-10 flex items-center justify-center gap-2 pt-2" role="tablist" aria-label="Vehicle slides">
+              {/* Bottom Dot Nav Indicators with Accessible ARIA Tabs & Touch Targets */}
+              <div className="relative z-10 flex items-center justify-center gap-1 pt-2" role="tablist" aria-label="Vehicle slides">
                 {SLIDE_VEHICLES.map((v, idx) => (
                   <button
                     key={idx}
+                    role="tab"
+                    id={`vehicle-tab-${idx}`}
+                    aria-controls={`vehicle-panel-${idx}`}
+                    aria-selected={currentSlide === idx}
+                    tabIndex={currentSlide === idx ? 0 : -1}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                      currentSlide === idx
-                        ? 'w-7 bg-[#1769FF]'
-                        : 'w-2 bg-slate-300 hover:bg-slate-400'
-                    }`}
+                    className="p-2.5 cursor-pointer inline-flex items-center justify-center focus:outline-none"
                     aria-label={`Go to slide ${idx + 1}: ${v.name}`}
-                  />
+                  >
+                    <span
+                      className={`h-2 rounded-full transition-all duration-300 block ${
+                        currentSlide === idx
+                          ? 'w-7 bg-[#1769FF]'
+                          : 'w-2.5 bg-slate-400 hover:bg-slate-500'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
 
@@ -143,7 +158,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
 
           {/* Right Copy Column */}
           <div className="lg:col-span-6 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold text-[#1769FF] uppercase tracking-widest shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-xs font-extrabold text-blue-950 uppercase tracking-widest shadow-xs">
               <span>OUR STORY & VALUES</span>
             </div>
 
@@ -157,41 +172,41 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-sky-700 font-bold text-sm">
-                  <Shield className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sky-800 font-extrabold text-sm">
+                  <Shield className="w-4 h-4 text-sky-700" />
                   <span>Uncompromised Safety</span>
                 </div>
-                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                <p className="text-xs text-slate-700 font-medium leading-relaxed">
                   GPS real-time tracking, emergency assistance & defensive driver training.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-[#1769FF] font-bold text-sm">
-                  <Clock className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-blue-900 font-extrabold text-sm">
+                  <Clock className="w-4 h-4 text-[#1769FF]" />
                   <span>On-Time Guarantee</span>
                 </div>
-                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                <p className="text-xs text-slate-700 font-medium leading-relaxed">
                   Chauffeurs dispatched 10-15 minutes ahead of scheduled time.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-emerald-700 font-bold text-sm">
-                  <HeartHandshake className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-emerald-800 font-extrabold text-sm">
+                  <HeartHandshake className="w-4 h-4 text-emerald-700" />
                   <span>Transparent Rates</span>
                 </div>
-                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                <p className="text-xs text-slate-700 font-medium leading-relaxed">
                   Fixed pricing with zero hidden surcharges or surprise billing.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-amber-700 font-bold text-sm">
-                  <Award className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-amber-800 font-extrabold text-sm">
+                  <Award className="w-4 h-4 text-amber-700" />
                   <span>Executive Comfort</span>
                 </div>
-                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                <p className="text-xs text-slate-700 font-medium leading-relaxed">
                   Pristine AC, plush upholstery, mobile chargers & bottled water.
                 </p>
               </div>

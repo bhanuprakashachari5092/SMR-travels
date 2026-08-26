@@ -46,7 +46,7 @@ export const CTA: React.FC<CTAProps> = ({ onOpenBooking }) => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-semibold text-sm text-white bg-emerald-600 hover:bg-emerald-500 border border-emerald-500/30 shadow-lg shadow-emerald-600/30 transition-all duration-300 transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm text-white bg-emerald-700 hover:bg-emerald-800 border border-emerald-600/30 shadow-lg shadow-emerald-700/30 transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <WhatsAppIcon className="w-4.5 h-4.5" />
               <span>WhatsApp Us</span>

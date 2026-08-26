@@ -60,8 +60,8 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenBooking }) => {
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold tracking-wider text-[#1769FF] uppercase shadow-2xs">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-xs font-black tracking-wider text-blue-950 uppercase shadow-2xs">
+            <HelpCircle className="w-3.5 h-3.5 text-[#1769FF]" />
             <span>FREQUENTLY ASKED QUESTIONS • ANANTAPUR</span>
           </div>
 
@@ -156,7 +156,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenBooking }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-black text-xs bg-emerald-700 hover:bg-emerald-800 text-white shadow-md transition-all"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>WhatsApp Chat</span>

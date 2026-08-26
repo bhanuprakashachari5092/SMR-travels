@@ -77,7 +77,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-extrabold text-[#0B1F3A] tracking-tight">Quick Ride Booking</h3>
+              <h2 className="text-lg font-extrabold text-[#0B1F3A] tracking-tight">Quick Ride Booking</h2>
               <p className="text-xs text-slate-500 font-semibold">Select your route & instant fare lookup</p>
             </div>
           </div>
