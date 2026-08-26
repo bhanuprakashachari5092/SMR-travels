@@ -3,24 +3,24 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { QuickSearchWidget } from './components/QuickSearchWidget';
-import { VideoSection } from './components/VideoSection';
-import { FounderSection } from './components/FounderSection';
-import { Services } from './components/Services';
-import { Fleet } from './components/Fleet';
-import { PopularRoutes } from './components/PopularRoutes';
-import { WhyChooseUs } from './components/WhyChooseUs';
-import { BookingProcess } from './components/BookingProcess';
-import { Stats } from './components/Stats';
-import { Testimonials } from './components/Testimonials';
-import { LocationSection } from './components/LocationSection';
-import { FAQSection } from './components/FAQSection';
-import { About } from './components/About';
-import { CTA } from './components/CTA';
-import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 
-// Lazy load booking modal to keep initial bundle size tiny and ultra-fast
-const BookingFormModal = lazy(() => import('./components/BookingFormModal').then(module => ({ default: module.BookingFormModal })));
+// Below-the-fold components lazy loaded for instant sub-second desktop & mobile load
+const VideoSection = lazy(() => import('./components/VideoSection').then(m => ({ default: m.VideoSection })));
+const FounderSection = lazy(() => import('./components/FounderSection').then(m => ({ default: m.FounderSection })));
+const Stats = lazy(() => import('./components/Stats').then(m => ({ default: m.Stats })));
+const Services = lazy(() => import('./components/Services').then(m => ({ default: m.Services })));
+const Fleet = lazy(() => import('./components/Fleet').then(m => ({ default: m.Fleet })));
+const PopularRoutes = lazy(() => import('./components/PopularRoutes').then(m => ({ default: m.PopularRoutes })));
+const WhyChooseUs = lazy(() => import('./components/WhyChooseUs').then(m => ({ default: m.WhyChooseUs })));
+const BookingProcess = lazy(() => import('./components/BookingProcess').then(m => ({ default: m.BookingProcess })));
+const About = lazy(() => import('./components/About').then(m => ({ default: m.About })));
+const LocationSection = lazy(() => import('./components/LocationSection').then(m => ({ default: m.LocationSection })));
+const FAQSection = lazy(() => import('./components/FAQSection').then(m => ({ default: m.FAQSection })));
+const Testimonials = lazy(() => import('./components/Testimonials').then(m => ({ default: m.Testimonials })));
+const CTA = lazy(() => import('./components/CTA').then(m => ({ default: m.CTA })));
+const Footer = lazy(() => import('./components/Footer').then(m => ({ default: m.Footer })));
+const BookingFormModal = lazy(() => import('./components/BookingFormModal').then(m => ({ default: m.BookingFormModal })));
 
 export function App() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -57,48 +57,53 @@ export function App() {
         {/* MakeMyTrip Style Pickup & Drop Booking Search Widget */}
         <QuickSearchWidget onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
-        {/* 2. Video Showcase Section (Right after Hero, Video on Left without Audio) */}
-        <VideoSection />
+        {/* Below-the-fold content wrapped in Suspense for ultra-fast initial load */}
+        <Suspense fallback={<div className="min-h-96" />}>
+          {/* 2. Video Showcase Section (Right after Hero, Video on Left without Audio) */}
+          <VideoSection />
 
-        {/* 3. Executive Headquarters & Leadership Section */}
-        <FounderSection onOpenBooking={() => handleOpenBooking()} />
+          {/* 3. Executive Headquarters & Leadership Section */}
+          <FounderSection onOpenBooking={() => handleOpenBooking()} />
 
-        {/* 3. Key Stats Counter Section */}
-        <Stats />
+          {/* 3. Key Stats Counter Section */}
+          <Stats />
 
-        {/* Travel Services Offered */}
-        <Services onSelectService={handleSelectService} />
+          {/* Travel Services Offered */}
+          <Services onSelectService={handleSelectService} />
 
-        {/* Luxury Vehicle Fleet Showcase */}
-        <Fleet onSelectCar={(carName) => handleOpenBooking(carName)} />
+          {/* Luxury Vehicle Fleet Showcase */}
+          <Fleet onSelectCar={(carName) => handleOpenBooking(carName)} />
 
-        {/* 🛣️ Top Outstation & Airport Travel Routes (High-Intent SEO Hub) */}
-        <PopularRoutes onOpenBooking={(carName) => handleOpenBooking(carName)} />
+          {/* 🛣️ Top Outstation & Airport Travel Routes (High-Intent SEO Hub) */}
+          <PopularRoutes onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
-        {/* Why Choose SMR Section */}
-        <WhyChooseUs />
+          {/* Why Choose SMR Section */}
+          <WhyChooseUs />
 
-        {/* 3 Step Booking Process */}
-        <BookingProcess onOpenBooking={() => handleOpenBooking()} />
+          {/* 3 Step Booking Process */}
+          <BookingProcess onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Brand Promise & About Us */}
-        <About onOpenBooking={(carName) => handleOpenBooking(carName)} />
+          {/* Brand Promise & About Us */}
+          <About onOpenBooking={(carName) => handleOpenBooking(carName)} />
 
-        {/* 📍 SMR Car Travels Google Maps & Location Section */}
-        <LocationSection onOpenBooking={() => handleOpenBooking()} />
+          {/* 📍 SMR Car Travels Google Maps & Location Section */}
+          <LocationSection onOpenBooking={() => handleOpenBooking()} />
 
-        {/* ❓ High-Intent Local SEO FAQ Section for Anantapur Travel */}
-        <FAQSection onOpenBooking={() => handleOpenBooking()} />
+          {/* ❓ High-Intent Local SEO FAQ Section for Anantapur Travel */}
+          <FAQSection onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Verified Customer Testimonials (Moved to Bottom) */}
-        <Testimonials />
+          {/* Verified Customer Testimonials (Moved to Bottom) */}
+          <Testimonials />
 
-        {/* Final Conversion Call To Action */}
-        <CTA onOpenBooking={() => handleOpenBooking()} />
+          {/* Final Conversion Call To Action */}
+          <CTA onOpenBooking={() => handleOpenBooking()} />
+        </Suspense>
       </main>
 
       {/* Footer */}
-      <Footer onOpenBooking={() => handleOpenBooking()} />
+      <Suspense fallback={null}>
+        <Footer onOpenBooking={() => handleOpenBooking()} />
+      </Suspense>
 
       {/* Fixed Sticky Floating WhatsApp Button */}
       <WhatsAppButton onOpenBooking={() => handleOpenBooking()} />

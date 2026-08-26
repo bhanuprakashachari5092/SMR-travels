@@ -242,9 +242,14 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
 
             {/* PICKUP TIME & PASSENGERS */}
             <div className="md:col-span-3 relative">
-              <label htmlFor="quick-pickup-time" className="block text-[11px] font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">
-                PICKUP TIME & PASSENGERS
-              </label>
+              <div className="flex items-center justify-between mb-1.5">
+                <label htmlFor="quick-pickup-time" className="text-[11px] font-extrabold text-slate-700 uppercase tracking-wider">
+                  TIME
+                </label>
+                <label htmlFor="quick-passengers-count" className="text-[11px] font-extrabold text-slate-700 uppercase tracking-wider">
+                  PASSENGERS
+                </label>
+              </div>
               <div className="grid grid-cols-2 gap-2">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-[#00B8D9]">
@@ -252,10 +257,11 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   </div>
                   <select
                     id="quick-pickup-time"
+                    name="pickupTime"
                     value={pickupTime}
                     onChange={(e) => setPickupTime(e.target.value)}
                     aria-label="Select pickup time"
-                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
+                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none cursor-pointer"
                   >
                     <option value="05:00 AM">05:00 AM</option>
                     <option value="06:00 AM">06:00 AM</option>
@@ -275,10 +281,11 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   </div>
                   <select
                     id="quick-passengers-count"
+                    name="passengersCount"
                     value={passengers}
                     onChange={(e) => setPassengers(e.target.value)}
                     aria-label="Select number of passengers"
-                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
+                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none cursor-pointer"
                   >
                     <option value="1 Passenger">1 Passenger</option>
                     <option value="2 Passengers">2 Passengers</option>
