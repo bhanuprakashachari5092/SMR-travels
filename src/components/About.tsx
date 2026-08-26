@@ -108,32 +108,32 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
               {/* Manual Left/Right Navigation Arrows */}
               <button
                 onClick={handlePrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-200 shadow-md opacity-80 hover:opacity-100 transition-all hover:scale-110"
-                aria-label="Previous Slide"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer"
+                aria-label="Previous vehicle slide"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
               <button
                 onClick={handleNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-200 shadow-md opacity-80 hover:opacity-100 transition-all hover:scale-110"
-                aria-label="Next Slide"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/95 hover:bg-white text-[#0B1F3A] hover:text-[#1769FF] border border-slate-300 shadow-md transition-all hover:scale-110 cursor-pointer"
+                aria-label="Next vehicle slide"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
 
               {/* Bottom Dot Nav Indicators */}
-              <div className="relative z-10 flex items-center justify-center gap-2 pt-2">
-                {SLIDE_VEHICLES.map((_, idx) => (
+              <div className="relative z-10 flex items-center justify-center gap-2 pt-2" role="tablist" aria-label="Vehicle slides">
+                {SLIDE_VEHICLES.map((v, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
+                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       currentSlide === idx
                         ? 'w-7 bg-[#1769FF]'
                         : 'w-2 bg-slate-300 hover:bg-slate-400'
                     }`}
-                    aria-label={`Go to slide ${idx + 1}`}
+                    aria-label={`Go to slide ${idx + 1}: ${v.name}`}
                   />
                 ))}
               </div>
@@ -151,17 +151,17 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
               About <span className="text-transparent bg-clip-text bg-linear-to-r from-[#1769FF] to-[#00B8D9]">SMR Car Travels</span>
             </h2>
 
-            <p className="text-base text-slate-600 leading-relaxed font-normal">
+            <p className="text-base text-slate-700 leading-relaxed font-medium">
               SMR Car Travels provides reliable, comfortable, and professional travel solutions for local, outstation, airport, and corporate transportation. Designed around your journey, we turn everyday road travel into an effortless executive experience.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-[#00B8D9] font-bold text-sm">
+                <div className="flex items-center gap-2 text-sky-700 font-bold text-sm">
                   <Shield className="w-4 h-4" />
                   <span>Uncompromised Safety</span>
                 </div>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
                   GPS real-time tracking, emergency assistance & defensive driver training.
                 </p>
               </div>
@@ -171,27 +171,27 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
                   <Clock className="w-4 h-4" />
                   <span>On-Time Guarantee</span>
                 </div>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
                   Chauffeurs dispatched 10-15 minutes ahead of scheduled time.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm">
+                <div className="flex items-center gap-2 text-emerald-700 font-bold text-sm">
                   <HeartHandshake className="w-4 h-4" />
                   <span>Transparent Rates</span>
                 </div>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
                   Fixed pricing with zero hidden surcharges or surprise billing.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-                <div className="flex items-center gap-2 text-[#C9A227] font-bold text-sm">
+                <div className="flex items-center gap-2 text-amber-700 font-bold text-sm">
                   <Award className="w-4 h-4" />
                   <span>Executive Comfort</span>
                 </div>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
                   Pristine AC, plush upholstery, mobile chargers & bottled water.
                 </p>
               </div>

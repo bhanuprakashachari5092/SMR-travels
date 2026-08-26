@@ -39,12 +39,14 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
         </div>
 
         {/* Filter Category Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" role="tablist" aria-label="Vehicle categories">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 ${
+              role="tab"
+              aria-selected={selectedCategory === cat}
+              className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
                 selectedCategory === cat
                   ? 'bg-linear-to-r from-[#1769FF] to-[#00B8D9] text-white shadow-md shadow-blue-500/20'
                   : 'bg-slate-100 text-[#0B1F3A] hover:bg-slate-200 border border-slate-200/80'
@@ -66,7 +68,7 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
               <div className="relative h-64 sm:h-72 overflow-hidden bg-linear-to-b from-[#F0F6FF] via-white to-[#F8FAFC] flex items-center justify-center p-4">
                 <img
                   src={car.image}
-                  alt={car.name}
+                  alt={`SMR Car Travels ${car.name} ${car.category} Rental Anantapur`}
                   loading="lazy"
                   decoding="async"
                   width={340}
@@ -106,7 +108,7 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
                     {car.tagline}
                   </p>
 
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                  <p className="text-sm text-slate-700 leading-relaxed mb-6 font-medium">
                     {car.description}
                   </p>
 
@@ -114,19 +116,19 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
                   <div className="grid grid-cols-3 gap-3 mb-6 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
                     <div className="flex flex-col items-center justify-center text-center">
                       <Users className="w-4 h-4 text-[#1769FF] mb-1" />
-                      <span className="text-[11px] text-slate-500 font-medium">Capacity</span>
+                      <span className="text-[11px] text-slate-600 font-semibold">Capacity</span>
                       <span className="text-xs font-bold text-[#0B1F3A]">{car.seats} Seats</span>
                     </div>
 
                     <div className="flex flex-col items-center justify-center text-center border-x border-slate-200">
-                      <Briefcase className="w-4 h-4 text-[#00B8D9] mb-1" />
-                      <span className="text-[11px] text-slate-500 font-medium">Luggage</span>
+                      <Briefcase className="w-4 h-4 text-sky-600 mb-1" />
+                      <span className="text-[11px] text-slate-600 font-semibold">Luggage</span>
                       <span className="text-xs font-bold text-[#0B1F3A]">{car.luggage} Bags</span>
                     </div>
 
                     <div className="flex flex-col items-center justify-center text-center">
                       <Snowflake className="w-4 h-4 text-[#3157D5] mb-1" />
-                      <span className="text-[11px] text-slate-500 font-medium">Climate</span>
+                      <span className="text-[11px] text-slate-600 font-semibold">Climate</span>
                       <span className="text-xs font-bold text-[#0B1F3A]">Full AC</span>
                     </div>
                   </div>
@@ -145,7 +147,8 @@ export const Fleet: React.FC<FleetProps> = ({ onSelectCar }) => {
                 {/* Book Vehicle CTA */}
                 <button
                   onClick={() => onSelectCar(car.name)}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-lg shadow-blue-500/20 hover:shadow-cyan-500/30 transition-all duration-300"
+                  aria-label={`Book ${car.name} with SMR Car Travels`}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-lg shadow-blue-500/20 hover:shadow-cyan-500/30 transition-all duration-300 cursor-pointer"
                 >
                   <WhatsAppIcon className="w-4 h-4" />
                   <span>Book {car.name} Now</span>

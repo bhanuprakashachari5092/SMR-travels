@@ -91,10 +91,12 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenBooking }) => {
                 }`}
               >
                 <button
+                  id={`faq-btn-${idx}`}
                   type="button"
                   onClick={() => toggleFAQ(idx)}
                   className="w-full py-4.5 px-5 sm:px-6 flex items-center justify-between gap-4 text-left font-bold text-[#0B1F3A] text-sm sm:text-base cursor-pointer"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
                 >
                   <span className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#1769FF] shrink-0" />
@@ -108,7 +110,12 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenBooking }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 animate-in fade-in duration-200">
+                  <div
+                    id={`faq-answer-${idx}`}
+                    role="region"
+                    aria-labelledby={`faq-btn-${idx}`}
+                    className="px-5 sm:px-6 pb-5 pt-1 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 animate-in fade-in duration-200 font-medium"
+                  >
                     <p>{faq.answer}</p>
                   </div>
                 )}

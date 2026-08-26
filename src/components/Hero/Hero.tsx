@@ -93,7 +93,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             <div className="pt-4">
               <button
                 onClick={onOpenBooking}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-xl shadow-blue-500/25 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
+                aria-label="Book your ride with SMR Car Travels"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-[#1769FF] via-[#1254D4] to-[#00B8D9] hover:from-[#1254D4] hover:to-[#00B8D9] shadow-xl shadow-blue-500/25 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Book Your Ride</span>
                 <ArrowRight className="w-4 h-4" />
@@ -101,13 +102,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             </div>
 
             {/* Quick Micro Stat Badge */}
-            <div className="pt-2 flex items-center gap-4 text-xs text-slate-500 border-t border-slate-200/80 mt-6">
+            <div className="pt-2 flex items-center gap-4 text-xs text-slate-600 font-medium border-t border-slate-200/80 mt-6">
               <div>
-                <span className="text-[#0B1F3A] font-bold">1000+</span> Satisfied Travelers
+                <span className="text-[#0B1F3A] font-extrabold">1000+</span> Satisfied Travelers
               </div>
               <div className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
               <div>
-                <span className="text-[#0B1F3A] font-bold">24/7</span> Dispatch Active
+                <span className="text-[#0B1F3A] font-extrabold">24/7</span> Dispatch Active
               </div>
             </div>
 

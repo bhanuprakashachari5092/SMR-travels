@@ -186,7 +186,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {/* Book Ride Button */}
               <button
                 onClick={() => onOpenBooking && onOpenBooking()}
-                className="px-3.5 py-1.5 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-90 transition-transform"
+                aria-label="Book your ride online"
+                className="px-3.5 py-1.5 rounded-full text-xs font-black text-white bg-linear-to-r from-[#1769FF] to-[#00B8D9] shadow-md shadow-blue-500/20 active:scale-90 transition-transform cursor-pointer"
               >
                 Book
               </button>
@@ -194,7 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {/* Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-full ios-glass-button text-[#0B1F3A] active:scale-90 transition-transform focus:outline-none"
+                className="p-2 rounded-full ios-glass-button text-[#0B1F3A] active:scale-90 transition-transform focus:outline-none cursor-pointer"
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -208,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             <div className="md:hidden pt-4 pb-2 mt-3 border-t border-black/8 space-y-4 animate-in slide-in-from-top-2 duration-300">
               
               {/* Mobile Navigation Links */}
-              <nav className="grid grid-cols-2 gap-1.5">
+              <nav className="grid grid-cols-2 gap-1.5" aria-label="Mobile Navigation">
                 {navLinks.map((link) => {
                   const isActive = activeSection === link.id;
                   const Icon = link.icon;
@@ -235,18 +236,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 <div className="grid grid-cols-2 gap-2">
                   <a
                     href={`tel:${SITE_CONFIG.contactPhone}`}
+                    aria-label={`Call primary phone ${SITE_CONFIG.contactPhone}`}
                     className="flex items-center justify-center gap-1.5 py-2.5 rounded-2xl font-bold text-xs text-[#0B1F3A] ios-glass-button"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#1769FF]" />
-                    <span>Call 1</span>
+                    <span>Call Primary</span>
                   </a>
 
                   <a
                     href={`tel:${SITE_CONFIG.contactPhone2}`}
+                    aria-label={`Call alternate phone ${SITE_CONFIG.contactPhone2}`}
                     className="flex items-center justify-center gap-1.5 py-2.5 rounded-2xl font-bold text-xs text-[#0B1F3A] ios-glass-button"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#1769FF]" />
-                    <span>Call 2</span>
+                    <span>Call Alternate</span>
                   </a>
                 </div>
 
@@ -254,6 +257,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp with Mohammad Rafi"
                   className="w-full flex items-center justify-center gap-2 py-2.5 rounded-2xl font-bold text-xs text-white bg-linear-to-r from-emerald-600 to-teal-500 shadow-md"
                 >
                   <WhatsAppIcon className="w-4 h-4 text-white" />
@@ -265,7 +269,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     setMobileMenuOpen(false);
                     if (onOpenBooking) onOpenBooking();
                   }}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-2xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] via-[#0A84FF] to-[#00B8D9] shadow-lg shadow-blue-500/20"
+                  aria-label="Open ride booking form"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-2xl font-bold text-xs text-white bg-linear-to-r from-[#1769FF] via-[#0A84FF] to-[#00B8D9] shadow-lg shadow-blue-500/20 cursor-pointer"
                 >
                   <span>Book Ride Online</span>
                   <ArrowRight className="w-4 h-4" />

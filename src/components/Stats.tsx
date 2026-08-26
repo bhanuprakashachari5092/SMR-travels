@@ -17,7 +17,7 @@ export const Stats: React.FC = () => {
               <div className="text-sm font-bold text-[#0B1F3A] mb-1">
                 {stat.label}
               </div>
-              <div className="text-xs text-slate-500 font-medium">
+              <div className="text-xs text-slate-600 font-semibold">
                 {stat.sublabel}
               </div>
             </div>

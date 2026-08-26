@@ -56,6 +56,9 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
     <div 
       className="fixed inset-0 z-50 overflow-y-auto bg-[#071426]/70 backdrop-blur-md p-4 sm:p-6 flex min-h-full items-center justify-center animate-in fade-in duration-200"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="booking-modal-title"
     >
       <div 
         className="relative w-full max-w-2xl bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xl text-left my-auto text-[#0B1F3A]"
@@ -64,8 +67,8 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
         {/* Absolute Top Right Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 sm:top-6 sm:right-6 p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#0B1F3A] transition-all duration-200 shadow-sm border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 z-20"
-          aria-label="Close modal"
+          className="absolute top-5 right-5 sm:top-6 sm:right-6 p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#0B1F3A] transition-all duration-200 shadow-sm border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 z-20 cursor-pointer"
+          aria-label="Close booking modal"
         >
           <X className="w-5 h-5" />
         </button>
@@ -77,8 +80,8 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
               <Sparkles className="w-3.5 h-3.5 text-[#00B8D9]" />
               <span>Instant WhatsApp Booking</span>
             </div>
-            <h2 className="text-2xl font-extrabold text-[#0B1F3A]">Book Your Premium Ride</h2>
-            <p className="text-xs text-slate-500 font-medium mt-1 leading-relaxed">
+            <h2 id="booking-modal-title" className="text-2xl font-extrabold text-[#0B1F3A]">Book Your Premium Ride</h2>
+            <p className="text-xs text-slate-600 font-semibold mt-1 leading-relaxed">
               Fill in your trip details to generate your pre-formatted WhatsApp booking message.
             </p>
           </div>
@@ -90,75 +93,80 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
             
             {/* Full Name */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-full-name" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5 text-[#1769FF]" />
                 <span>Full Name *</span>
               </label>
               <input
+                id="modal-full-name"
                 type="text"
                 required
                 placeholder="e.g. Rahul Sharma"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-500 font-medium"
               />
             </div>
 
             {/* Mobile Number */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-mobile-number" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-[#1769FF]" />
                 <span>Mobile Number *</span>
               </label>
               <input
+                id="modal-mobile-number"
                 type="tel"
                 required
                 placeholder="e.g. +91 98765 43210"
                 value={formData.mobile}
                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-500 font-medium"
               />
             </div>
 
             {/* Pickup Location */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-pickup-location" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Pickup Location *</span>
               </label>
               <input
+                id="modal-pickup-location"
                 type="text"
                 required
                 placeholder="City, Landmark or Address"
                 value={formData.pickupLocation}
                 onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-500 font-medium"
               />
             </div>
 
             {/* Drop Location */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-drop-location" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-rose-500" />
                 <span>Drop Location *</span>
               </label>
               <input
+                id="modal-drop-location"
                 type="text"
                 required
                 placeholder="Destination City or Airport"
                 value={formData.dropLocation}
                 onChange={(e) => setFormData({ ...formData, dropLocation: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-500 font-medium"
               />
             </div>
 
             {/* Travel Date */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-travel-date" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-[#1769FF]" />
                 <span>Travel Date *</span>
               </label>
               <input
+                id="modal-travel-date"
                 type="date"
                 required
                 min={todayStr}
@@ -170,11 +178,12 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
             {/* Travel Time */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-travel-time" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-[#1769FF]" />
                 <span>Pickup Time *</span>
               </label>
               <input
+                id="modal-travel-time"
                 type="time"
                 required
                 value={formData.travelTime}
@@ -185,11 +194,12 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
             {/* Number of Passengers */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-passengers-select" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <Users className="w-3.5 h-3.5 text-[#1769FF]" />
                 <span>Passengers</span>
               </label>
               <select
+                id="modal-passengers-select"
                 value={formData.passengers}
                 onChange={(e) => setFormData({ ...formData, passengers: e.target.value })}
                 className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
@@ -205,11 +215,12 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
             {/* Car Preference */}
             <div>
-              <label className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <label htmlFor="modal-car-preference-select" className="text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
                 <Car className="w-3.5 h-3.5 text-[#C9A227]" />
                 <span>Car Preference</span>
               </label>
               <select
+                id="modal-car-preference-select"
                 value={formData.carPreference}
                 onChange={(e) => setFormData({ ...formData, carPreference: e.target.value })}
                 className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
@@ -226,10 +237,11 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
           {/* Service Type Selection */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5">
+            <label htmlFor="modal-service-type-select" className="block text-xs font-bold text-slate-700 mb-1.5">
               Service Type
             </label>
             <select
+              id="modal-service-type-select"
               value={formData.serviceType}
               onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
               className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 font-medium"
@@ -244,15 +256,16 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
           {/* Additional Message */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5">
+            <label htmlFor="modal-additional-notes" className="block text-xs font-bold text-slate-700 mb-1.5">
               Additional Notes / Requests (Optional)
             </label>
             <textarea
+              id="modal-additional-notes"
               rows={2}
               placeholder="e.g. Need child seat, extra luggage space, special flight pickup..."
               value={formData.additionalMessage}
               onChange={(e) => setFormData({ ...formData, additionalMessage: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-400 font-medium"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#0B1F3A] text-sm focus:outline-none focus:border-electric-500 focus:ring-2 focus:ring-[#1769FF]/20 placeholder:text-slate-500 font-medium"
             />
           </div>
 
@@ -260,12 +273,12 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-3 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-xl shadow-emerald-600/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full flex items-center justify-center gap-3 py-3.5 rounded-2xl font-bold text-sm text-white bg-linear-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-xl shadow-emerald-600/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span>BOOK ON WHATSAPP NOW</span>
             </button>
-            <p className="text-[11px] text-center text-slate-500 font-medium mt-2">
+            <p className="text-[11px] text-center text-slate-600 font-semibold mt-2">
               Instant redirection to WhatsApp with your pre-formatted booking details.
             </p>
           </div>

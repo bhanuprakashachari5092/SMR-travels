@@ -135,7 +135,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
         </div>
 
         {/* Booking Search Form Grid */}
-        <form onSubmit={handleSearchSubmit} className="pt-6">
+        <form onSubmit={handleSearchSubmit} role="search" aria-label="Quick Ride Booking Search" className="pt-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             
             {/* HTML5 datalist for instant city suggestions while allowing manual typing */}
@@ -147,7 +147,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
 
             {/* FROM (PICKUP LOCATION) */}
             <div className="md:col-span-3 relative">
-              <label className="block text-[11px] font-extrabold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label htmlFor="quick-pickup-city" className="block text-[11px] font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">
                 FROM (PICKUP LOCATION)
               </label>
               <div className="relative">
@@ -155,12 +155,14 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <input
+                  id="quick-pickup-city"
                   type="text"
                   list="popular-cities-list"
                   value={pickupCity}
                   onChange={(e) => setPickupCity(e.target.value)}
                   placeholder="Enter Pickup City / Address"
-                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-400 font-sans"
+                  aria-label="Pickup location"
+                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-300 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-500 font-sans"
                   required
                 />
               </div>
@@ -172,6 +174,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                 type="button"
                 onClick={handleSwap}
                 title="Swap Pickup & Drop Locations"
+                aria-label="Swap Pickup and Drop Locations"
                 className="p-3 rounded-full bg-slate-100 hover:bg-blue-50 text-[#1769FF] hover:scale-110 border border-slate-200 transition-all duration-300 shadow-xs"
               >
                 <ArrowRightLeft className="w-4 h-4" />
@@ -180,7 +183,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
 
             {/* TO (DROP LOCATION) */}
             <div className="md:col-span-3 relative">
-              <label className="block text-[11px] font-extrabold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label htmlFor="quick-drop-city" className="block text-[11px] font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">
                 TO (DROP LOCATION)
               </label>
               <div className="relative">
@@ -188,12 +191,14 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   <Navigation className="w-5 h-5" />
                 </div>
                 <input
+                  id="quick-drop-city"
                   type="text"
                   list="popular-cities-list"
                   value={dropCity}
                   onChange={(e) => setDropCity(e.target.value)}
                   placeholder="Enter Drop City / Destination"
-                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-400 font-sans"
+                  aria-label="Drop location"
+                  className="w-full pl-11 pr-4 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-300 rounded-2xl font-bold text-sm text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all placeholder:text-slate-500 font-sans"
                   required
                 />
               </div>
@@ -201,7 +206,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
 
             {/* PICKUP DATE */}
             <div className="md:col-span-2 relative">
-              <label className="block text-[11px] font-extrabold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label htmlFor="quick-pickup-date" className="block text-[11px] font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">
                 PICKUP DATE
               </label>
               <div className="relative">
@@ -209,18 +214,20 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                   <Calendar className="w-4.5 h-4.5" />
                 </div>
                 <input
+                  id="quick-pickup-date"
                   type="date"
                   value={pickupDate}
                   min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setPickupDate(e.target.value)}
-                  className="w-full pl-10 pr-3 py-3 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all cursor-pointer"
+                  aria-label="Pickup date"
+                  className="w-full pl-10 pr-3 py-3 bg-slate-50/80 hover:bg-slate-100/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#1769FF]/30 transition-all cursor-pointer"
                 />
               </div>
             </div>
 
             {/* PICKUP TIME & PASSENGERS */}
             <div className="md:col-span-3 relative">
-              <label className="block text-[11px] font-extrabold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label htmlFor="quick-pickup-time" className="block text-[11px] font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">
                 PICKUP TIME & PASSENGERS
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -229,9 +236,11 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                     <Clock className="w-4 h-4" />
                   </div>
                   <select
+                    id="quick-pickup-time"
                     value={pickupTime}
                     onChange={(e) => setPickupTime(e.target.value)}
-                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-200 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
+                    aria-label="Select pickup time"
+                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
                   >
                     <option value="05:00 AM">05:00 AM</option>
                     <option value="06:00 AM">06:00 AM</option>
@@ -250,9 +259,11 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
                     <Users className="w-4 h-4" />
                   </div>
                   <select
+                    id="quick-passengers-count"
                     value={passengers}
                     onChange={(e) => setPassengers(e.target.value)}
-                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-200 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
+                    aria-label="Select number of passengers"
+                    className="w-full pl-8 pr-2 py-3 bg-slate-50/80 border border-slate-300 rounded-2xl font-bold text-xs text-[#0B1F3A] focus:outline-none"
                   >
                     <option value="1 Passenger">1 Passenger</option>
                     <option value="2 Passengers">2 Passengers</option>
@@ -271,7 +282,7 @@ export const QuickSearchWidget: React.FC<QuickSearchWidgetProps> = () => {
 
           {/* Bottom Action Submit Button Row */}
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200/80 mt-6">
-            <div className="flex items-center gap-4 text-xs font-semibold text-slate-500">
+            <div className="flex items-center gap-4 text-xs font-bold text-slate-600">
               <span className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 Zero Cancellation Fee

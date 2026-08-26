@@ -57,8 +57,17 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
             {steps.map((item) => (
               <div
                 key={item.step}
+                role="button"
+                tabIndex={0}
+                aria-label={`Step ${item.step}: ${item.title}. Click to open booking form.`}
                 onClick={onOpenBooking}
-                className="group cursor-pointer bg-white rounded-3xl p-8 border border-slate-200/80 text-center flex flex-col items-center shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:border-[#1769FF]/40 transition-all duration-300 transform hover:-translate-y-1"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onOpenBooking();
+                  }
+                }}
+                className="group cursor-pointer bg-white rounded-3xl p-8 border border-slate-200/80 text-center flex flex-col items-center shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:border-[#1769FF]/40 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#1769FF]/40"
               >
                 {/* Step Number Circle */}
                 <div className="relative mb-6">
@@ -74,7 +83,7 @@ export const BookingProcess: React.FC<BookingProcessProps> = ({ onOpenBooking })
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-slate-600 leading-relaxed mb-4 font-normal">
+                <p className="text-sm text-slate-700 leading-relaxed mb-4 font-medium">
                   {item.description}
                 </p>
 

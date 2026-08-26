@@ -53,8 +53,17 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
           {SERVICES.map((srv) => (
             <div
               key={srv.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`Select ${srv.title} service to book on WhatsApp`}
               onClick={() => onSelectService(srv.title)}
-              className="group cursor-pointer text-left space-y-3 p-2 border-b border-slate-200/80 pb-6 hover:border-[#1769FF] transition-colors duration-300"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onSelectService(srv.title);
+                }
+              }}
+              className="group cursor-pointer text-left space-y-3 p-3 rounded-2xl border-b border-slate-200/80 pb-6 hover:border-[#1769FF] hover:bg-white/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1769FF]/40"
             >
               {/* Service Title with Icon */}
               <div className="flex items-center gap-3">
@@ -67,16 +76,16 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
               </div>
 
               {/* Service Description Text */}
-              <p className="text-sm text-slate-600 font-medium leading-relaxed">
+              <p className="text-sm text-slate-700 font-medium leading-relaxed">
                 {srv.shortDesc}
               </p>
 
               {/* Highlights Text Format */}
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500 font-semibold pt-1">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-bold pt-1">
                 {srv.highlights.map((h, i) => (
                   <span key={i} className="flex items-center gap-1.5">
-                    {i > 0 && <span className="text-slate-300">•</span>}
-                    <span className="text-slate-700">{h}</span>
+                    {i > 0 && <span className="text-slate-400">•</span>}
+                    <span className="text-slate-800">{h}</span>
                   </span>
                 ))}
               </div>
