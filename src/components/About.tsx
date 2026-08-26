@@ -5,37 +5,37 @@ const SLIDE_VEHICLES = [
   {
     name: 'Toyota Innova Crysta',
     tag: 'Executive Luxury SUV',
-    image: '/images/innova-hero.png',
+    image: '/images/innova-hero.webp',
   },
   {
     name: 'Suzuki Ertiga (7 Seater)',
     tag: 'Executive SUV',
-    image: '/images/about/ertiga.png',
+    image: '/images/about/ertiga.webp',
   },
   {
     name: 'Swift Dzire',
     tag: 'Sedan Class',
-    image: '/images/about/dzire.png',
+    image: '/images/about/dzire.webp',
   },
   {
     name: 'Toyota Etios',
     tag: 'Outstation Sedan',
-    image: '/images/about/etios.png',
+    image: '/images/about/etios.webp',
   },
   {
     name: 'Force Toofan',
     tag: 'Rugged Multi-Utility',
-    image: '/images/about/toofan.png',
+    image: '/images/about/toofan.webp',
   },
   {
     name: 'Tempo Traveller (12+ Seater)',
     tag: 'Group Luxury',
-    image: '/images/about/traveller.png',
+    image: '/images/about/traveller.webp',
   },
   {
     name: 'SMR Luxury Minibus',
     tag: '20+ Seater Executive',
-    image: '/images/about/minibus.png',
+    image: '/images/about/minibus.webp',
   },
 ];
 

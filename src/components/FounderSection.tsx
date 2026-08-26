@@ -29,7 +29,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onOpenBooking })
 
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
                 <img
-                  src="/images/smr-owner-office.jpg"
+                  src="/images/smr-owner-office.webp"
                   alt="Mohammad Rafi - Founder & Managing Director of SMR Car Travels Anantapur | Best ATP Car Travels & Taxi Service"
                   title="Mohammad Rafi - SMR Car Travels Anantapur (ATP Travels)"
                   itemProp="image"

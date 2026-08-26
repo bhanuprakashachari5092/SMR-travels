@@ -92,7 +92,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: 'Comfortable executive sedan for city & outstation travel',
     description: 'Smooth, quiet, and fuel-efficient sedan offering maximum legroom, dual air conditioning, and plush seating for business and personal trips.',
-    image: '/images/about/dzire.png',
+    image: '/images/about/dzire.webp',
     features: ['Plush Seating', 'Dual Air Conditioning', 'Bluetooth Music System', 'Generous Boot Space'],
     isPopular: true
   },
@@ -106,7 +106,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: 'Reliable & spacious sedan for highway long trips',
     description: 'Proven Toyota engineering delivering top highway safety, extra luggage boot capacity, and noise-free acoustic interior cabin comfort.',
-    image: '/images/about/etios.png',
+    image: '/images/about/etios.webp',
     features: ['Spacious Rear Seat Legroom', 'Extra Boot Capacity', 'Powerful Air Cooling', 'Verified Chauffeur'],
     isPopular: false
   },
@@ -120,7 +120,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: '4.9 ★ Premium Executive Outstation Luxury SUV',
     description: 'Ultimate luxury MPV/SUV experience with captain seats, ambient lighting, dual AC, highway stability, and unmatched passenger comfort.',
-    image: '/images/innova-hero.png',
+    image: '/images/innova-hero.webp',
     features: ['7 Passengers Luxury Seating', '4+ Large Suitcases', 'Dual Climate Control AC', 'Captain Leather Seats'],
     isPopular: true
   },
@@ -134,7 +134,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: '4.9 ★ Premium Outstation & Executive Family SUV Fleet',
     description: 'Dual Air Conditioning, 7-Seater Luxury Comfort, GPS Tracked, Uniformed Chauffeur, Sanitized & Dual AC, On-Time Guarantee.',
-    image: '/images/about/ertiga.png',
+    image: '/images/about/ertiga.webp',
     features: ['7 Passengers Capacity', '3+ Large Suitcases', 'Dual Climate Control', 'GPS Tracked Vehicle'],
     isPopular: true
   },
@@ -148,7 +148,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: 'Rugged, high-clearance multi-passengers group vehicle',
     description: 'Built for tough terrains, group pilgrimage tours, and village outstation routes with extra seating capacity and sturdy suspension.',
-    image: '/images/about/toofan.png',
+    image: '/images/about/toofan.webp',
     features: ['10+ Seater Capacity', 'High Ground Clearance', 'Ample Luggage Storage', 'Experienced Highway Driver'],
     isPopular: true
   },
@@ -162,7 +162,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: 'Executive group luxury vehicle for tours & corporate events',
     description: 'High-roof luxury Tempo Traveller with reclining captain seats, individual air vents, reading lamps, and large luggage carrier.',
-    image: '/images/about/traveller.png',
+    image: '/images/about/traveller.webp',
     features: ['12 to 17 Reclining Seats', 'Individual AC Vents', '6+ Large Suitcases Capacity', 'Pushback Seats'],
     isPopular: true
   },
@@ -176,7 +176,7 @@ export const FLEET: CarModel[] = [
     comfortRating: 5,
     tagline: 'Premium 20+ seater mini bus for large group tours & corporate delegations',
     description: 'High-comfort executive minibus featuring plush reclining seats, spacious luggage compartment, PA sound system, and individual AC vents.',
-    image: '/images/about/minibus.png',
+    image: '/images/about/minibus.webp',
     features: ['20 to 26 Seater Capacity', 'High-Roof Luxury Interior', 'Reclining Seats & PA System', 'Generous Luggage Space'],
     isPopular: true
   }

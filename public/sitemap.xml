@@ -10,40 +10,40 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/innova-hero.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/innova-hero.webp</image:loc>
       <image:title>SMR Car Travels by Mohammad Rafi - Toyota Innova Crysta Luxury Chauffeur Vehicle Anantapur</image:title>
       <image:caption>Premium car rental and outstation taxi service in Anantapur by Mohammad Rafi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/smr-logo-transparent.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/smr-logo-transparent.webp</image:loc>
       <image:title>SMR Car Travels Official Logo</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/ertiga.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/ertiga.webp</image:loc>
       <image:title>Suzuki Ertiga 7 Seater Luxury Taxi Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/dzire.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/dzire.webp</image:loc>
       <image:title>Swift Dzire Executive Sedan Car Travels Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/etios.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/etios.webp</image:loc>
       <image:title>Toyota Etios Sedan Outstation Taxi Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/toofan.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/toofan.webp</image:loc>
       <image:title>Force Toofan 10 Seater Multi-Utility Vehicle Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/traveller.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/traveller.webp</image:loc>
       <image:title>Force Tempo Traveller 12-17 Seater Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/about/minibus.png</image:loc>
+      <image:loc>https://smrcartravels.in/images/about/minibus.webp</image:loc>
       <image:title>SMR Luxury Minibus 20+ Seater Executive Coach Anantapur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://smrcartravels.in/images/smr-owner-office.jpg</image:loc>
+      <image:loc>https://smrcartravels.in/images/smr-owner-office.webp</image:loc>
       <image:title>Mohammad Rafi - Founder of SMR Car Travels Anantapur | ATP Car Travels</image:title>
       <image:caption>Mohammad Rafi, Founder of SMR Car Travels Anantapur (ATP Travels). Top-rated 24/7 Anantapur car travels and taxi service.</image:caption>
       <image:geo_location>Anantapur, Andhra Pradesh, India</image:geo_location>
@@ -51,7 +51,7 @@
 
     <!-- Google Video Search Indexation -->
     <video:video>
-      <video:thumbnail_loc>https://smrcartravels.in/images/innova-hero.png</video:thumbnail_loc>
+      <video:thumbnail_loc>https://smrcartravels.in/images/innova-hero.webp</video:thumbnail_loc>
       <video:title>SMR Car Travels Fleet &amp; Taxi Service Showcase Anantapur - Mohammad Rafi</video:title>
       <video:description>Watch SMR Car Travels fleet in action in Anantapur. Top-rated 24/7 car rental, Toyota Innova Crysta, Suzuki Ertiga, Swift Dzire, Tempo Traveller for outstation taxi trips and Bangalore Airport cab transfers by Mohammad Rafi.</video:description>
       <video:content_loc>https://smrcartravels.in/SMR%20travels.mp4</video:content_loc>

@@ -28,8 +28,10 @@ export const SMRLogo: React.FC<SMRLogoProps> = ({
   return (
     <div className={`inline-flex items-center select-none shrink-0 ${className}`}>
       <img
-        src="/images/smr-logo-transparent.png"
+        src="/images/smr-logo-transparent.webp"
         alt="SMR Car Travels - Your Journey. Our Responsibility."
+        width={180}
+        height={58}
         style={{ height: sizeStyles[size].height, maxHeight: sizeStyles[size].maxHeight, width: 'auto' }}
         className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
           darkBackground 

@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
               {/* Innova Crysta Image with glowing edges */}
               <img
-                src="/images/innova-hero.png"
+                src="/images/innova-hero.webp"
                 alt="SMR Car Travels Toyota Innova Crysta Luxury Chauffeur Vehicle"
                 fetchPriority="high"
                 decoding="async"

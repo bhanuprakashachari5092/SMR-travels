@@ -52,7 +52,9 @@ export const VideoSection: React.FC = () => {
                   controlsList="nodownload nofullscreen noremoteplayback"
                   onContextMenu={(e) => e.preventDefault()}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 brightness-95 pointer-events-none select-none"
-                />
+                >
+                  <track kind="captions" src="data:text/vtt,WEBVTT" srcLang="en" label="English" default />
+                </video>
               </div>
 
               {/* Bottom Feature Micro Badges */}
